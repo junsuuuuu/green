@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      (function () {
+        document.write("ㅎㅇㅎㅇ<br>");
+      })(); //자체호출(자동)
+
+      function a() {
+        document.write("안녕하세요<br>");
+      }
+      a(); //a함수 호출
+
+      function b() {
+        for (let i = 1; i <= 5; i++) {
+          document.write("감사<br>");
+        }
+      }
+      b();
+
+      function c(name, area) {
+        document.write(name + "님은" + area + "에삼<br>");
+      }
+      c("홍길동", "대전");
+
+      function d(num) {
+        document.write(num * num + "<br>");
+      }
+      d(5);
+
+      function e(x, y) {
+        return x * y;
+      }
+      document.write(e(3, 4) + "<br>");
+    </script>
+  </head>
+  <body>
+    <button onclick="a()">클릭</button>
+  </body>
+</html>

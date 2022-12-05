@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            @font-face{
+                font-family: genericons;
+                src: url(webfonts/genericons-regular-webfont.woff) format("woff");
+            }
+
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            body{
+                font: 1em verdana, sans-serif;
+                background: #555;
+                color: #333;
+            }
+
+            .container ul{
+                width: 930px;
+                height: 200px;
+                background: #8ac007;
+                list-style: none;
+            }
+
+            .container ul li.tabs{
+                position: relative;
+                float: left;
+                width: 80px;
+                height: 200px;
+                background: #8ac007;
+                border-right: 1px solid rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+                overflow: hidden; /*오버플로우라서 아래에 pargraph는 보일수 없음 그래서 hover시 width를 키우면서 자연스럽게 pargraph가 나타남*/
+                box-sizing: border-box;
+                transition: all 500ms ease-in-out 1s;
+            }
+
+            .container ul li.tabs:hover{
+                width: 450px;
+            }
+
+            .container ul li.tabs .pargraph{
+                margin-left: 80px;
+                background: #fff;
+                width: 370px; /*450 - 80*/
+                height: 200px;
+                box-sizing: border-box;
+                padding: 50px 10px 0 10px;
+            }
+
+            .container ul li.tabs .links a{
+                display: block;
+                text-indent: -9999px; /*텍스트 높이(화면에 안보이게 숨김)*/
+                line-height: 0;
+            }
+
+            .container ul li.tabs .links a::before, .container ul li.tabs .links a::after{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 80px;
+                font-family: genericons;
+                display: block;
+                color: #fff;
+                text-indent: 0; /*links a 텍스트는 안보이게 숨겼지만 before after에 콘텐츠는 화면에 보일 수 있도록 0으로 초기화*/
+                line-height: 200px;
+                text-align: center;
+                transition: margin 1s;
+            }
+
+            .container ul li.tabs .links a::after{
+                font-size: 36px;
+                color: red;
+                margin-left: -85px; /*-85px로 보이지 않는 곳에 숨겨둠, hover시 0으로 원래 자리로 돌아옴*/
+                
+            }
+
+            .container ul li.tabs:hover .links a::after{
+                margin-left: 0;
+            }
+
+            .container ul li.tabs:hover .links a::before{
+                margin-left: -85px;
+            }
+            
+
+            /*.links와 각 브랜드명은 같은 클래스를 가지고있음, 그래서 기본 설정은 위 links에 적용했고 변경되는 브랜드만 아래처럼 값을 넣어줌*/
+            .container ul li.tabs .twitter a::before, .container ul li.tabs .twitter a::after{
+                content: "\f202";
+            }
+
+            .container ul li.tabs .facebook a::before, .container ul li.tabs .facebook a::after{
+                content: "\f204";
+            }
+
+            .container ul li.tabs .linkedin a::before, .container ul li.tabs .linkedin a::after{
+                content: "\f208";
+            }
+
+            .container ul li.tabs .instagram a::before, .container ul li.tabs .instagram a::after{
+                content: "\f215";
+            }
+
+            .container ul li.tabs .youtube a::before, .container ul li.tabs .youtube a::after{
+                content: "\f213";
+            }
+
+            .container ul li.tabs .tumblr a::before, .container ul li.tabs .tumblr a::after{
+                content: "\f214";
+            }
+
+            .container ul li.tabs .dribbble a::before, .container ul li.tabs .dribbble a::after{
+                content: "\f201";
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <ul>
+                <li class="tabs">
+                    <div class="links twitter">
+                        <a href="#">Twitter</a>
+                    </div>
+
+                    <div class="pargraph">
+                        <h1>Twitter</h1>
+                        <p>
+                            My thoughts in 140 characters or less. Sometimes, I do not know how to correctly use Twitter.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="tabs">
+                    <div class="links facebook">
+                        <a href="#">Facebook</a>
+                    </div>
+
+                    <div class="pargraph">
+                        <h1>Facebook</h1>
+                        <p>
+                            Where I get to stalk my friends and let them stalk me. A place to get people to stroke your ego.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="tabs">
+                    <div class="links linkedin">
+                        <a href="#">LinkedIn</a>
+                    </div>
+
+                    <div class="pargraph">
+                        <h1>LinkedIn</h1>
+                        <p>
+                            I act totally professional on this one. It is what the recruiters see, you see.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="tabs">
+                    <div class="links instagram">
+                        <a href="#">Instagram</a>
+                    </div>
+
+                    <div class="pargraph">
+                        <h1>Instagram</h1>
+                        <p>
+                            Where I post my duckface pictures. Occasionally, I would post pictures of my food and my cats.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="tabs">
+                    <div class="links youtube">
+                        <a href="#">Youtube</a>
+                    </div>
+
+                    <div class="pargraph">
+                        <h1>Youtube</h1>
+                        <p>
+                            Just kidding! I do not have a YouTube account. I'm not too fond of the camera.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="tabs">
+                    <div class="links tumblr">
+                        <a href="#">Tumblr</a>
+                    </div>
+
+                    <div class="pargraph">
+                        <h1>Tumblr</h1>
+                        <p>
+                            I have a tumblr but I don't really use it. I still prefer WordPress. I'm quite old-fashioned.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="tabs">
+                    <div class="links dribbble">
+                        <a href="#">Dribbble</a>
+                    </div>
+
+                    <div class="pargraph">
+                        <h1>Dribbble</h1>
+                        <p>
+                            My thoughts in 140 characters or less. Sometimes, I do not know how to correctly use Twitter.
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </body>
+</html>

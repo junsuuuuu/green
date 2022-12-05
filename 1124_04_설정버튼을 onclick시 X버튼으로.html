@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            
+            ul{
+                list-style: none;
+                display: inline-block;
+                cursor: pointer;
+                margin: 20px;
+            }
+
+            ul li{
+                width: 35px;
+                height: 5px;
+                background-color: #333;
+                margin: 6px;
+                transition: all 0.5s;
+            }
+            
+            .active #a{
+                transform: translate(0, 11px) rotate(-45deg) ;
+            }
+
+            .active #b{
+                opacity: 0 ;
+            }
+
+            .active #c{
+                transform: translate(0, -11px) rotate(45deg) ;
+            }
+        </style>
+    </head>
+
+    <body>
+        <ul class="container" onclick="move()">
+            <li id="a"></li>
+            <li id="b"></li>
+            <li id="c"></li>
+        </ul>
+
+        <script>
+            function move(){
+                document.getElementsByClassName("container")[0].classList.toggle("active");
+            }
+        </script>
+    </body>
+</html>
+

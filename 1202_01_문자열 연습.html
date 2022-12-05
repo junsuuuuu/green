@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let a = " hi";
+      let b = "micrsoft and Microsoft and microsoft";
+      document.write(b.replace("micrsoft", "w3school"), "<br>");
+      document.write("<br>");
+
+      let c = "MICROSOFT and microsoft and microsoft";
+      document.write(c.replace(/microsoft/i, "w3school"), "<br>"); // /문자/i 는 대소문자 구분없이 검색
+      document.write(c.replace(/microsoft/g, "w3school"), "<br>"); // 해당 문자 모두 변경
+      document.write(c.replaceAll("microsoft", "w3school"), "<br>");
+      document.write(c.toUpperCase(), "<br>"); //전부대문자
+      document.write(c.toLowerCase(), "<br>"); //전부소문자
+      document.write("<br>");
+
+      let text = "          hello          ";
+      document.write(text.length, "<br>");
+      let text2 = text.trim(); //빈공간을 지움
+      document.write(text2.length, "<br>");
+      let text3 = text.trimStart(); //앞에있는빈공간을지움
+      document.write(text3.length, "<br>");
+      let text4 = text.trimEnd(); //뒤에있는빈공간을지움
+      document.write(text4.length, "<br>");
+      document.write("<br>");
+
+      let x = "Hello";
+      document.write(x, " ", x.length, "<br>");
+      document.write(x.slice(2, 4), "<br>"); //2부터 4 이전 까지 2~3
+      document.write(x.substring(2, 4), "<br>");
+      document.write(x.substr(2, 4), "<br>"); //2부터 4까지
+      document.write(x.substr(-3, 2), "<br>"); //-3부터 2개
+      document.write(x.replace("He", "he"), "<br>"); //He를 찾아서 he로 변경
+      document.write(x.replace("l", "변경"), "<br>"); //첫번째 일치하는 l 하나에만 적용
+      document.write(x.concat(a), "<br>"); //x와 a를 연결
+      document.write(x.concat(" 안녕"), "<br>");
+      document.write(x.charAt(1), "<br>"); //해당 위치의 문자를 반환
+      document.write(x.charCodeAt(1), "<br>"); //해당 위치의 문자의 유니코드를 반환함
+      document.write("<br>");
+
+      let txt = "nice,to,meet,you";
+      let txt2 = txt.split(","); //txt에 ,를 기준으로 배열로 나눔
+      for (let i = 0; i <= 3; i++) {
+        document.write(txt2[i], "<br>");
+      }
+      document.write("<br>");
+
+      let tx = "hello";
+      let tx2 = tx.split("");
+      for (let i = 0; i <= 4; i++) {
+        document.write(tx2[i], "<br>");
+      }
+      document.write(tx.search("o"), "<br>"); //tx에 o의 위치
+      document.write(tx.match("e"), "<br>");
+      document.write("<br>");
+
+      let y = new String("Hello");
+      document.write(y, " ", y.length, "<br>");
+      document.write("<br>");
+
+      let arr1 = ["하나", 100, 200, 300];
+      document.write(arr1, " ", arr1.length, "<br>");
+      document.write(arr1.slice(2, 3), "<br>");
+      document.write(arr1.slice(-3, -2), "<br>");
+      //document.write(arr1.substring(2, 4), "<br>");//배열은 substring 안되는듯
+      //document.write(arr1.substr(2, 4), "<br>");//substr도 안되는듯?
+      document.write("<br>");
+
+      let arr2 = new Array("하나", 100, 200, 300);
+      document.write(arr2, " ", arr2.length, "<br>");
+      document.write("<br>");
+
+      //substring() 문자객체의 시작에서 끝 인덱스 전까지의 문자열 반환
+      //substr() 문자객체의 시작에서 몇개의 문자열을 반환할지
+    </script>
+  </head>
+  <body></body>
+</html>

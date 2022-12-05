@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+        <form action="">
+            <fieldset>
+                <legend>회원가입</legend>
+                <label for="user_id">아이디입력</label><br> <!--for은 input에 id를 추적(?)-->
+                <input type="text" id="user_id" name="user_id" min="5"
+                max="10" maxlength="10" size="10" placeholder="아이디입력" autofocus required><br>
+
+                <label for="user_pw">비밀번호입력</label><br>
+                <input type="password" id="user_pw" name="user_pw" maxlength="10"><br>
+
+                <label for="man">남</label>
+                <input type="radio" id="man" name="gender"><br>
+                <label for="woman">여</label>
+                <input type="radio" id="woman" name="gender"><br> <!--name이 같아야 같은 속성으로 읽음, 다르면 라디오임에도 두 곳 다 선택이 됨-->
+
+                <p>당신의 취미는</p>
+                <label for="travel">여행</label>
+                <input type="checkbox" id="travel" name="hobby" checked>
+                <label for="car">자동차</label>
+                <input type="checkbox" id="car" name="hobby"><br>
+
+                <input type="button" value="click" onclick="alert('Hello')"><br>
+
+                <label for="favcolor">색상선택</label>
+                <input type="color" id="favcolor"><br>
+
+                날짜<input type="date"><br>
+                날짜시간<input type="datetime"><br>
+
+                <input type="submit" value="보내기">
+            </fieldset>
+        </form>
+    </body>
+</html>

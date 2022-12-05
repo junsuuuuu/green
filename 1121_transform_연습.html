@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <style>
+            .scene{
+                width: 200px;
+                height: 200px;
+                margin: 80px;
+                perspective: 400px;
+            }
+
+            .cube{
+                width: 200px;
+                height: 200px;
+                position: relative;
+                transform-style: preserve-3d;
+            }
+
+            .cube>div{
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                border: 2px solid black;
+            }
+
+            .front{
+                background-color: rgba(255, 0, 0, 0.5);
+                transform: rotateY(0) translateZ(100px);
+            }
+
+            .back{
+                background-color: rgba(0, 255, 0, 0.5);
+                transform: rotateY(180deg) translateZ(100px);
+            }
+
+            .right{
+                background-color: rgba(0, 0, 255, 0.5);
+                transform: rotateY(90deg) translateZ(100px);
+            }
+
+            .left{
+                background-color: rgba(255, 255, 0, 0.5);
+                transform: rotateY(-90deg) translateZ(100px);
+            }
+
+            .top{
+                background-color: rgba(255, 0, 255, 0.5);
+                transform: rotateX(90deg) translateZ(100px);
+            }
+
+            .bottom{
+                background-color: rgba(0, 255, 255, 0.5);
+                transform: rotateX(-90deg) translateZ(100px);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="scene">
+            <div class="cube">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="right"></div>
+                <div class="left"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+            </div>
+        </div>
+    </body>
+</html>

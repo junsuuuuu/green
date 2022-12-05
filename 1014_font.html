@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/all.css"><!--첫번째방법 + 애니매이션아이콘-->
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" /> <!--구글폼아이콘-->
+        
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"><!--구글폼폰트-->
+        <title>Document</title>
+
+        <style>
+            /*두번째방법*/
+            @font-face{
+                font-family: brands;
+                src:url(webfonts/fa-brands-400.woff2) format("woff2");
+            }
+            h1{
+                font-family: brands;
+            }
+            /**/
+            @font-face{
+                font-family: solid;
+                src:url(webfonts/fa-solid-900.woff2) format("woff2");
+            }
+            h2{
+                font-family: solid;
+            }
+
+
+
+            /*세번째방법*/
+            h3:before{ /*content에 값을 넣어줌 패밀리는 폰트에 맞는걸로*/
+                content:"\f015";
+                font-family: solid;
+            }
+        
+            h4::after{ /*before은 h3에 앞에, after은 뒤에 적용*/
+                content: "\f099";
+                font-family: brands;
+            }
+
+
+            /*애니메이션아이콘은 결국 폰트이기 때문에 폰트색을 바꾸면 바뀜*/
+            i{
+                color: #00ff00;
+            }
+
+
+            /*구글폼폰트*/
+            div{ /*폰트를 불러오고*/
+                font-family: 'Open Sans', sans-serif;
+            }
+
+            .sans300{ /*weight값을 통해 조절*/
+                font-weight: 300;
+            }
+            .sans400{
+                font-weight: 400;
+            }
+            .sans500{
+                font-weight: 500;
+            }
+
+
+            @font-face {
+                font-family: opensans;
+                src: url(webfonts/OpenSans-Regular.woff);
+            }
+            .opensnasfont{
+                font-family: opensans;
+            }
+            
+
+            @font-face {
+                font-family: opensansbold;
+                src: url(webfonts/OpenSans-Bold.woff);
+            }
+            .opensnasboldfont{
+                font-family: opensansbold;
+            }
+        </style>
+    </head>
+
+
+
+    <body>
+        <!--첫번째방법-->
+        <div><!--head에 link...을 사용해
+            all.css 파일(font awesome 사이트에서 다운)을 불러와야함-->
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <h1><i class="fa-solid fa-bars"></i></h1>
+
+
+        <!--두번째방법-->
+        <!--스타일에 @font-face를 설정하고 폰트패밀리 이름을 사용할 css에 패밀리 이름으로 적용-->
+        <h1>&#xf09a;</h1>
+        <h2>&#xf015;</h2>
+        <!--&#xㅁㅁㅁ; 이런식으로 ㅁㅁㅁ에 유니코드값을 넣어주면 됨-->
+
+
+        <!--세번째방법-->
+        <h3></h3>
+        <h4></h4>
+
+
+        <!--애니메이션아이콘-->
+        <div class="fa-3x">
+            <i class="fa-solid fa-circle-plus fa-beat"></i>
+            <i class="fa-solid fa-heart fa-beat"></i>
+            <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;" ></i>
+            <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 2s;"></i>
+            <i class="fa-solid fa-heart fa-beat" style="--fa-beat-scale: 2.0;"></i>
+        </div>
+          
+        <div class="fa-3x">
+            <i class="fa-solid fa-triangle-exclamation fa-fade"></i>
+            <i class="fa-solid fa-skull-crossbones fa-fade"></i>
+            <i class="fa-solid fa-desktop-arrow-down fa-fade"></i>
+            <i class="fa-solid fa-i-cursor fa-fade" style="--fa-animation-duration: 2s; --fa-fade-opacity: 0.6;" ></i>
+          </div>
+
+          <div class="fa-3x">
+            <i class="fa-solid fa-triangle-person-digging fa-beat-fade"></i>
+            <i class="fa-solid fa-square-exclamation fa-beat-fade"></i>
+            <i class="fa-solid fa-poo-bolt fa-beat-fade" style="--fa-beat-fade-opacity: 0.1; --fa-beat-fade-scale: 1.25;" ></i>
+            <i class="fa-solid fa-circle-info fa-beat-fade" style="--fa-beat-fade-opacity: 0.67; --fa-beat-fade-scale: 1.075;" ></i>
+          </div>
+
+          <div class="fa-3x">
+            <i class="fa-solid fa-basketball fa-bounce"></i>
+            <i class="fa-solid fa-volleyball fa-bounce"></i>
+          
+            <!-- bounce animation with no "squish" -->
+            <i class="fa-solid fa-frog fa-bounce" style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; " ></i>
+          
+            <!-- bounce animation with no "squish" or "rebound" -->
+            <i class="fa-solid fa-envelope fa-bounce" style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0;" ></i>
+          </div>
+
+          <div class="fa-3x">
+            <i class="fa-solid fa-compact-disc fa-flip"></i>
+            <i class="fa-solid fa-camera-rotate fa-flip"></i>
+            <i class="fa-solid fa-cassette-tape fa-flip"></i>
+            <i class="fa-solid fa-scroll fa-flip" style="--fa-flip-x: 1; --fa-flip-y: 0;" ></i>
+            <i class="fa-solid fa-money-check-dollar fa-flip" style="--fa-animation-duration: 3s;" ></i>
+          </div>
+
+          <div class="fa-3x">
+            <i class="fa-solid fa-bell fa-shake"></i>
+            <i class="fa-solid fa-lock fa-shake"></i>
+            <i class="fa-solid fa-stopwatch fa-shake"></i>
+            <i class="fa-solid fa-bomb fa-shake"></i>
+          </div>
+
+          <div class="fa-3x">
+            <i class="fa-solid fa-sync fa-spin"></i>
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+            <i class="fa-solid fa-cog fa-spin"></i>
+            <i class="fa-solid fa-cog fa-spin fa-spin-reverse"></i>
+            <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+            <i class="fa-solid fa-spinner fa-spin-pulse fa-spin-reverse"></i>
+          </div>
+          
+
+          <!--구글폼 아이콘-->
+        <span class="material-symbols-outlined">
+            rocket_launch
+        </span>
+
+        <div class="sans300">sans300</div>
+        <div class="sans400">sans400</div>
+        <div class="sans500">sans500</div>
+
+
+        <div class="opensnasfont">open sans</div>
+        <div class="opensnasboldfont">open sans bold</div>
+    </body>
+</html>

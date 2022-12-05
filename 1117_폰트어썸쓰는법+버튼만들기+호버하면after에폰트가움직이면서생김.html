@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+
+        <link rel="stylesheet" href="css/all.css">
+        <!--all.css를 연결함(폰트어썸을 사용하기 위함)-->
+        <!--경로에 webfonts폴더와 해당 폴더에 사용할 아이콘 폰트가 있어야함-->
+        
+
+        <style>
+            .btn{
+                padding: 10px 15px;
+
+
+                font-size: 20px;
+                color: white;
+                /*폰트어썸에서 불러온 아이콘은 결국 폰트임에 폰트 속성 적용 가능*/
+
+
+                background: #ccc;
+                cursor: pointer;
+                border: none; /*버튼태그라 보더가 자동생성되서 없앰*/
+            }
+
+            .btn:hover{
+                position: relative;
+                background-color: #ddd;
+            }
+
+            .icon2 .btn::after{
+                content: "\00bb";
+                /*해당 유니코드는 w3schools에서 css entities를 검색해서 찾음
+                유니코드로 하는거라 폰트어썸처럼 따로 연결할 필요 없이 값만 넣으면 되는듯?*/
+
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+
+                
+                position: relative;
+                left: -20px;
+                opacity: 0;
+                transition: all 0.5s;
+            }
+
+            .icon2 .btn:hover::after{
+                left: 0;
+                opacity: 1;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>Icon Buttons</h2>
+
+        <div class="icon">
+            <h4>Icon Buttons</h4>
+            <button class="btn">
+
+
+                <i class="fa-solid fa-house-user"></i>
+                <!--사용할 아이콘을 폰트어썸에서 복사-->
+
+
+            </button>
+
+            <button class="btn"><i class="fa-solid fa-trash"></i></button>
+
+            <button class="btn"><i class="fa-solid fa-folder"></i></button>    
+        </div>
+
+        <div class="icon2">
+            <h4>Icon Buttons</h4>
+            <button class="btn">
+                <i class="fa-solid fa-house-user"></i>
+                <span>Home</span>
+            </button>
+
+            <button class="btn">
+                <i class="fa-solid fa-trash"></i>
+                <span>Trash</span>
+            </button>
+
+            <button class="btn">
+                <i class="fa-solid fa-folder"></i>
+                <span>Folder</span>
+            </button>    
+        </div>
+    </body>
+</html>

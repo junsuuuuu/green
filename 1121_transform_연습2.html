@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            ul{
+                list-style: none;
+            }
+            
+            a{
+                text-decoration: none;
+            }
+
+            .scene{
+                width: 300px;
+                height: 300px;
+                margin: 300px auto;
+                perspective: 900px;
+            }
+
+            .cube{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                transform-style: preserve-3d;
+                animation: turn 3s infinite;
+            }
+
+            @keyframes turn{
+                0%{
+                    transform: rotate3d(0,0,0);
+                }
+
+                100%{
+                    transform: rotate3d(1,0,1,360deg);
+                }
+            }
+
+            .cube>div{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .a{
+                background-color: aliceblue;
+                transform: rotateY(0deg) translateZ(150px);
+            }
+
+            .b{
+                background-color: antiquewhite;
+                transform: rotateY(90deg) translateZ(150px);
+            }
+
+            .c{
+                background-color: aqua;
+                transform: rotateY(180deg) translateZ(150px);
+            }
+
+            .d{
+                background-color: aquamarine;
+                transform: rotateY(270deg) translateZ(150px);
+            }
+
+            .e{
+                background-color: azure;
+                transform: rotateX(90deg) translateZ(150px);
+            }
+
+            .f{
+                background-color: beige;
+                transform: rotateX(-90deg) translateZ(150px);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="scene">
+            <div class="cube">
+                <div class="a"></div>
+                <div class="b"></div>
+                <div class="c"></div>
+                <div class="d"></div>
+                <div class="e"></div>
+                <div class="f"></div>
+            </div>
+        </div>
+    </body>
+</html>

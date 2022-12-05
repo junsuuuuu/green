@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            ul{
+                list-style: none;
+            }
+
+            a{
+                text-decoration: none;
+                color: #000;
+            }
+
+            .head{
+                width: 100%;
+                max-width: 1200px; /*width를 100%으로 설정했는데 창 사이즈를 조절할때(반응형) 크기가 아무리 변해도 최대 크기는 1200px로 고정한 것*/
+                margin: 0 auto;
+                background-color: #ccc;
+                height: 100px;
+                /*overflow: hidden;*/ /*자식이 float를 가질때 높이값이 없으면 크기를 가지지 못하는데 overflow를 사용하면 자식의 크기만큼 크기를 가짐*/
+            }
+
+            .logo{
+                width: 20%;
+                float: left;
+                background-color: rgba(255, 0, 0, 0.5);
+            }
+
+            .logo_wrap{ /*logo에 배경색상을 넣었는데 width값은 있지만 height값은 없어서 배경색이 표시가 되지 않지만 여백값을 넣었기 때문에 배경색이 보임*/
+                /*
+                padding: 50px;
+                margin: 50px;
+                */
+                text-align: center;
+                line-height: 100px;
+            }
+
+            .gnb{
+                width: 80%;
+                float: right;
+                background-color: rgba(255, 0, 0, 0.8);
+            }
+
+            .gnb ul{
+                float: right;
+                margin-left: 20px;
+            }
+
+            .gnb ul li{
+                /*width: 20%;*/ /*각 li에 길이가 다른 경우 폰트 길이(콘텐츠)에 따라 li 크기를 조절하고 싶어서 width를 삭제했고, width값이 없기때문에 콘텐츠 크기만큼 가로값을 가지고 있는 li a. 가시성을 위해 margin을 추가해 여백을 줌*/
+                float: left;
+            }
+
+            .gnb ul li a{
+                display: block; /*a태그는 인라인인데 블록으로 변경한 후 width값을 적용했기 때문에 배경색과 width값이 적용됨*/
+                width: 100%;
+                background-color: #0f0;
+                text-align: center;
+                line-height: 100px;
+                margin: 0 10px; /*가시성을 위해 임의의 가로 여백을 넣어줌*/
+            }
+
+            .gnb ul li a:hover{
+                background-color: #00f;
+                color: #fff;
+            }
+        </style>
+    </head>
+
+    <body>
+       <div class="head">
+        <div class="logo">
+            <div class="logo_wrap">로고</div> <!--logo의 크기는 width 20%으로 지정해야하는데 로고라는 폰트에는 마진, 패딩이 필요한 상황이여서 logo에 자식을 추가해서 logo_wrap에 여백값을 주기 위함-->
+        </div>
+        <div class="gnb">
+            <ul>
+                <li><a href="#">메뉴11111111111111111111111111111111111</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+                <li><a href="#">메뉴5</a></li>
+            </ul>
+        </div>
+       </div> 
+    </body>
+</html>

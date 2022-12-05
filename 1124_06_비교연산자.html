@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+
+        </style>
+
+        <script>
+            let a = 20;
+            let b = "20";
+            let c = 10;
+            let d = a == b;
+
+            document.write("a == b : ", a == b, "<br>"); 
+            //a와 b의 타입 상관없이 데이터 값만 비교해서 같으면 true를 반환
+
+            document.write("a의 유형 : ", typeof a, " / b의 유형 : ", typeof b, "<br>");
+            document.write("a === b : ", a === b, "<br>");
+            //==와 다르게 데이터 값이 같아도 타입이 다르면 false를 반환
+
+            document.write("a != b : ", a != b, "<br>");
+            //==와 마찬가지로 타입 상관없이 데이터만 비교해서 다르면 false를 반환
+
+            document.write("a !== b : ", a !== b, "<br>");
+            //===와 마찬가지로 데이터 값과 타입, 하나라도 다르면 true를 반환
+
+            document.write("a > c : ", a > c, "<br>");
+            //a가 c보다 큰가? 참이면 true, 거짓이면 false 반환
+
+            document.write("a < c : ", a < c, "<br>");
+            //a가 c보다 작은가? 참이면 true, 거짓이면 false 반환
+
+            document.write("a >= c : ", a >= c, "<br>");
+            //a가 c보다 크거나 같나? 참이면 true, 거짓이면 false 반환
+
+            document.write("a <= c : ", a <= c, "<br>");
+            //a가 c보다 작거나 같나? 참이면 true, 거짓이면 false 반환
+
+            let result = a > c ? "good" : "no-good";
+            //         =   조건?  참일때 :  거짓일때
+            //if문과 비슷, 참과 거짓만을 얻고자 할때
+            document.write("result : ", result, "<br>");
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+</html>

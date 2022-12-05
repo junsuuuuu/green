@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            p{
+                width: 100px;
+                height: 100px;
+                background: green;
+                animation-name: bg;
+                animation-duration: 2s;
+                animation-delay: 1s;
+            }
+
+            @keyframes bg{
+                0% {
+                    background: red;
+                    transform: translateX(0);
+                }
+                100% {
+                    background: blue;
+                    transform: translateX(500px);
+                }
+            }
+
+            .noen{
+                animation-fill-mode: none;
+            }
+
+            .forwards{
+                animation-fill-mode: forwards;
+            }
+
+            .backwards{
+                animation-fill-mode: backwards;
+            }
+
+            .both{
+                animation-fill-mode: both;
+            }
+        </style>
+    </head>
+
+    <body>  
+        <p class="none"></p>
+        <p class="forwards"></p>
+        <p class="backwards"></p>
+        <p class="both"></p>
+    </body>
+</html>

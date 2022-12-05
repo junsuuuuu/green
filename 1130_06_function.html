@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let chcolor = [
+        "white",
+        "#f00",
+        "#0f0",
+        "#00f",
+        "aqua",
+        "purple",
+        "yellow",
+      ];
+      let i = 1;
+      function color_change() {
+        document.querySelector("body").style.backgroundColor = chcolor[i];
+        i++;
+        if (i == chcolor.length) i = 0;
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="color_change()">배경색 변경</button>
+  </body>
+</html>

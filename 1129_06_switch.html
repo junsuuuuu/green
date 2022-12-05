@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let week = new Date();
+        let weekday = week.getDay();
+        console.log(weekday);
+
+        switch(weekday){
+            case 0:
+                document.write("일");
+                break;
+
+            case 1:
+                document.write("월");
+                break;
+
+            case 2:
+                document.write("화");
+                break;
+
+            case 3:
+                document.write("수");
+                break;
+
+            case 4:
+                document.write("목");
+                break;
+
+            case 5:
+                document.write("금");
+                break;
+
+            case 6:
+                document.write("토");
+                break;
+        }
+
+        if(weekday == 0){
+            document.write("일");
+        }
+        else if(weekday == 1){
+            document.write("월");
+        }
+        else if(weekday == 2){
+            document.write("화");
+        }
+        else if(weekday == 3){
+            document.write("수");
+        }
+        else if(weekday == 4){
+            document.write("목");
+        }
+        else if(weekday == 5){
+            document.write("금");
+        }
+        else if(weekday == 6){
+            document.write("토");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

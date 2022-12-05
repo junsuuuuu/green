@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .left{
+                width: 500px;
+                height: 330px;
+            }
+
+            .ps_wrap{
+                width: 100%;
+                display: flex;
+            }
+
+            .ps_wrap>div{
+                position: relative;
+                width: 33.333%;
+                height: 330px;
+                transition: all 0.5s;
+                cursor: pointer;
+            }
+
+            .ps_wrap .ps_left{
+                background: url(images/happybath/images/img1.jpg);
+            }
+
+            .ps_wrap .ps_center{
+                background: url(images/happybath/images/img2.jpg);
+            }
+
+            .ps_wrap .ps_right{
+                background: url(images/happybath/images/img3.jpg) center;
+            }
+
+            .ps_wrap>div:hover{
+                width: 60%;
+            }
+
+            .ps_wrap:hover > div:not(:hover) {
+                width: 20%;
+            }
+
+            .ps_wrap > div:hover .text_left {
+                display: none;
+            }
+            .ps_wrap > div:hover .text_right {
+                opacity: 1;
+            }
+
+            .text_left{
+                text-align: center;
+                line-height: 330px;
+                color: #fff;
+                font-size: 18px;
+                text-shadow: 1px 1px 1px black;
+            }
+
+            .text_right{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: absolute;
+                left: 0;
+                top: 0;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.5);
+                opacity: 0;
+                transition: all 1s;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="left">
+            <h3>해피바스 선물</h3>
+
+            <div class="ps_wrap">
+                <div class="ps_left">
+                    <div class="text_left">내추럴 성분</div>
+                    <div class="text_right">해피바스가 담고 있는 <br>'내추럴성분'이 궁금하다면?</div>
+                </div>
+
+                <div class="ps_center">
+                    <div class="text_left">내추럴 성분</div>
+                    <div class="text_right">해피바스가 담고 있는 <br>'내추럴성분'이 궁금하다면?</div>
+                </div>
+
+                <div class="ps_right">
+                    <div class="text_left">내추럴 성분</div>
+                    <div class="text_right">해피바스가 담고 있는 <br>'내추럴성분'이 궁금하다면?</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

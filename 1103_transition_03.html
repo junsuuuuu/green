@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            ul{
+                list-style: none;
+            }
+
+            body{
+                background: orange;
+            }
+            
+            .wrap{
+                width: 900px;
+                height: 400px;
+                margin: 100px auto;
+                border: 1px solid black;
+                perspective: 1000px;
+            }
+
+            .one{
+                position: relative;
+                width: 260px;
+                height: 400px;
+                transform-style: preserve-3d;
+                transition: all 0.5s;
+            }
+
+            .imgs{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 260px;
+                height: 400px;
+                background: url(images/poster01.jpg);
+                transform: translateZ(130px);
+                
+            }
+
+            .text{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 260px;
+                height: 400px;
+                background: white;
+                transform: rotateY(100deg) translateZ(130px);
+            }
+
+            .one:hover{
+                transform: rotateY(-90deg) translateZ(20px);
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div class="one">
+                <div class="imgs"></div>
+                <div class="text">
+                        In Bedford Falls, New York on Christmas Eve, George Bailey is deeply troubled. Prayers for his well-being from friends and family reach Heaven. Clarence Odbody, Angel Second Class, is assigned to visit Earth to save George, thereby earning his wings. Franklin and Joseph, the head angels, review George's life with Clarence.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

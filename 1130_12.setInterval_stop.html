@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+
+    <script>
+      let i = 1;
+      function slide() {
+        i++;
+        if (i > 6) i = 1;
+        let ch = document.getElementById("photo");
+        ch.setAttribute("src", "images/photo" + i + ".jpg");
+        ch.setAttribute("alt", "photo" + i);
+      }
+
+      let interval = setInterval(slide, 1000); //변수에 interval 생성
+
+      function stop() {
+        clearInterval(interval); //interval 지우기
+      }
+
+      function start() {
+        interval = setInterval(slide, 1000); //변수에 interval을 다시 생성
+      }
+    </script>
+  </head>
+  <body>
+    <img
+      src="images/photo1.jpg"
+      alt="1"
+      id="photo"
+      onmouseover="stop()"
+      onmouseout="start()"
+    />
+  </body>
+</html>

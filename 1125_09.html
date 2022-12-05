@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .box{
+                position: relative;
+                margin: 0 auto;
+                width: 300px;
+                height: 150px;
+                text-align: center;
+            }
+            
+            .modal{
+                opacity: 0;
+                position: absolute;
+                top: 5px;
+                left: 25%;
+                width: 150px;
+                height: 40px;
+                background-color: #333333;
+                color: #ffffff;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 5px;
+                transition: 0.3s;
+            }
+
+            .modal::after{
+                display: block;
+                content: "";
+                position: absolute;
+                top: 40px;
+                left: 65px;
+                width: 0;
+                height: 0;
+                border-top: 10px solid #333333;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                border-left: 10px solid transparent;
+            }
+
+            p{
+                cursor: pointer;
+            }
+
+            .active{
+                opacity: 1;
+            }
+        </style>
+
+        <script>
+            function btn(){
+                document.getElementsByClassName("modal")[0].classList.toggle("active");
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="box">
+            <h2>Popup</h2>
+            <p onclick="btn()">Click me to toggle the popup!</p>
+            <div class="modal">A Simple Popup!</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            html{
+                font-size: 200%;
+            }
+
+            body{
+                font: 16px Arial, sans-serif;
+            }
+
+            #wrap{
+                font-size: 8px;
+            }
+
+            #wrap > div{
+                border: 1px solid black;
+                box-sizing: border-box;
+            }
+
+            .a{
+                width: 160px;
+                height: 160px;
+            }
+
+            .b{
+                font-size: 50%;
+                width: 10em; /*1em은 현재 택스트 크기 (기본 택스트는 16px)*/
+                height: 10em;
+            }
+
+            .c{
+                width: 10rem; /*최상단에 있는 택스트 크기를 기준*/
+                height: 10rem;
+            }
+
+            .d{
+                width: 50vw; /*보이는 화면에 백분율로 width값을 표현*/
+                min-height: 100px;
+            }
+
+            .e{
+                height: 20vh; /*height*/
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <div class="a">a</div>
+            <div class="b">b</div>
+            <div class="c">c</div>
+            <div class="d">d</div>
+            <div class="e">e</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+
+    <script>
+      function on() {
+        let photo = document.getElementById("ch");
+        photo.setAttribute("src", "images/자바스크립트/pic_bulbon.gif");
+        photo.setAttribute("alt", "on");
+        //setAttribute는 ("이 속성의", "값을 바꾸는")
+      }
+      //on, off 각각 다른 방식으로 속성을 변경함
+      function off() {
+        let photo = document.getElementById("ch");
+        photo.src = "images/자바스크립트/pic_bulboff.gif";
+        photo.alt = "off";
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="on()">Turn on the light</button>
+    <img src="images/자바스크립트/pic_bulboff.gif" alt="off" id="ch" />
+    <button onclick="off()">Turn off the light</button>
+  </body>
+</html>

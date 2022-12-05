@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <style>
+            body{
+                background-color: #fff9ec;
+                color: #504326;
+            }
+
+            ul{
+                list-style: none;
+            }
+
+            a{
+                text-decoration: none;
+                color: #504326;
+            }
+
+            .gnb{
+                width: 300px;
+                height: 100px;
+                margin: 0 auto;
+                cursor: pointer;
+                border: 1px solid #ded3bb;
+                padding: 10px;
+            }
+
+            .menu .icon{
+                display: inline-block;
+                animation: icon_out 0.5s;
+            }
+
+            .menu:target .icon{
+                animation: icon_over 0.5s forwards;
+            }
+
+            @keyframes icon_over{
+                0%{
+                    transform: rotate(0deg);
+                }
+
+                100%{
+                    transform: rotate(45deg);
+                }
+            }
+
+            @keyframes icon_out{
+                0%{
+                    transform: rotate(45deg);
+                }
+
+                100%{
+                    transform: rotate(0deg);
+                }
+            }
+
+            .gnb ul{
+                width: 300px;
+                height: 70px;
+                background-color: white;
+                padding: 0;
+            }
+
+            .gnb li{
+                border-bottom: 1px solid black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="gnb">
+            <div class="menu" id="menu1">
+                <span class="icon">+</span>
+                <a href="#menu1">DropDown Menu</a>
+                <ul>
+                    <li><a href="#">menu01</a></li>
+                    <li><a href="#">menu02</a></li>
+                    <li><a href="#">menu03</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="gnb">
+            <div class="menu" id="menu2">
+                <span class="icon">+</span>
+                <a href="#menu2">DropDown Menu</a>
+                <ul>
+                    <li><a href="#">menu01</a></li>
+                    <li><a href="#">menu02</a></li>
+                    <li><a href="#">menu03</a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

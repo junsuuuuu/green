@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+
+        <style>
+            @font-face {
+            font-family: RammettoOne;
+            src: url(webfonts/RammettoOne-Regular.woff) format("woff");
+            }
+
+            body{
+                background: #6b566b;
+                margin-top: 100px;
+            }
+
+            section{
+                width: 50%;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .c1{
+                /*html에서 4개의 태그가 나란히 있기 때문에 한줄에 배치하기 위함*/
+                display: inline-block;
+
+                position: relative;
+
+                /*원 크기 지정*/
+                width: 1.25em;
+                height: 1.25em;
+            }
+
+            .c1::before{
+                content: "";
+                /*그림자에 크기를 주기 위해 블록*/
+                display: block;
+                width: 100%;
+                height: 0.625em;
+
+                /*원형을 만들기 위함*/
+                border-radius: 50%;
+                background: rgba(0, 0, 0, 1);
+                position: absolute;
+                bottom: -0.1em;
+
+                /*애니메이션 설정(1 2 3 4가 순서대로 움직이기 위해 딜레이를 각각 다르게 적용)*/
+                animation: shadow 1s linear 0s infinite;
+            }
+
+            .c1::after{
+                content: "";
+                /*공에 크기를 주기 위해 블록*/
+                display: block;
+                width: 100%;
+                height: 100%;
+
+                /*원형을 만들기 위함*/
+                border-radius: 50%;
+                background: #ffe1c9;
+                position: relative;
+                top: -2.5em;
+
+                /*애니메이션을 통해서 공이 눌리는 모습이 있는데 border-radius를 사용해서 만듬,
+                radius는 왼쪽 위, 오른쪽 아래 이런식으로 가장자리가 기준이 되기 때문에 원형이 좌우로 길어지는 모습으로 보이기 위해 공을 기우려서 모양을 잡음*/
+                transform: rotate(45deg);
+
+                /*애니메이션 설정(1 2 3 4가 순서대로 움직이기 위해 딜레이를 각각 다르게 적용)*/
+                animation: jellijump 1s linear 0s infinite;
+            }
+
+            /*c1과 차이점은 크기와 애니메이션 딜레이만 있음*/
+            .c2{
+                display: inline-block;
+                position: relative;
+                width: 1.875em;
+                height: 1.875em;
+            }
+
+            .c2::before{
+                content: "";
+                display: block;
+                width: 100%;
+                height: 0.9383em;
+                border-radius: 50%;
+                background: rgba(0, 0, 0, 1);
+                position: absolute;
+                bottom: -0.1em;
+                animation: shadow 1s linear 0.2s infinite;
+            }
+
+            .c2::after{
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background: #fac7b4;
+                position: relative;
+                top: -2.5em;
+                transform: rotate(45deg);
+                animation: jellijump 1s linear 0.2s infinite;
+            }
+
+            .c3{
+                display: inline-block;
+                position: relative;
+                width: 2.5em;
+                height: 2.5em;
+            }
+
+            .c3::before{
+                content: "";
+                display: block;
+                width: 100%;
+                height: 1.25em;
+                border-radius: 50%;
+                background: rgba(0, 0, 0, 1);
+                position: absolute;
+                bottom: -0.1em;
+                animation: shadow 1s linear 0.4s infinite;
+            }
+
+            .c3::after{
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background: #fca89d;
+                position: relative;
+                top: -2.5em;
+                transform: rotate(45deg);
+                animation: jellijump 1s linear 0.4s infinite;
+            }
+
+            .c4{
+                display: inline-block;
+                position: relative;
+                width: 3.125em;
+                height: 3.125em;
+            }
+
+            .c4::before{
+                content: "";
+                display: block;
+                width: 100%;
+                height: 1.563em;
+                border-radius: 50%;
+                background: rgba(0, 0, 0, 1);
+                position: absolute;
+                bottom: -0.1em;
+                animation: shadow 1s linear 0.6s infinite;
+            }
+
+            .c4::after{
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background: #ffe1c9;
+                position: relative;
+                top: -2.5em;
+                transform: rotate(45deg);
+                animation: jellijump 1s linear 0.6s infinite;
+            }
+
+            @keyframes jellijump{
+                5%{
+                    top: -2.5em;
+                }
+
+                20%{
+                    top: -1.875em;
+                }
+
+                40%{
+                    top: -0.625em;
+                    border-radius: 50%;
+                }
+
+                45%{
+                    border-radius: 60% 40% 60% 40%;
+                }
+
+                50%{
+                    top: 0em;
+                    border-radius: 70% 40% 80% 40%;
+                }
+
+                60%{
+                    top: -0.625em;
+                    border-radius: 90% 40% 90% 40%;
+                }
+
+                80%{
+                    top: -1.875em;
+                    border-radius: 40% 80% 40% 70%;
+                }
+
+                90%{
+                    border-radius: 60% 40% 60% 40%;
+                }
+
+                95%{
+                    top: -2.5em;
+                    border-radius: 50%;
+                }
+            }
+
+            @keyframes shadow{
+                0%{transform: scale(0.5);}
+                50%{transform: scale(1);}
+                100%{transform: scale(0.5);}
+            }
+
+            h1{
+                font-family: RammettoOne;
+                font-size: 4rem;
+                letter-spacing: -2px;
+                color: #6b566b;
+                text-shadow: 
+                0 0 0 #afc7b9, -2px -2px 0 #afc7b9, -3px -3px 0 #afc7b9, -4px -4px 0 #afc7b9,
+                -5px -5px 0 #fca89d, -6px -6px 0 #fca89d, -7px -7px 0 #fca89d,
+                -8px -8px 0 #fac7b4, -9px -9px 0 #fac7b4, -10px -10px 0 #fac7b4, -11px -11px 0 #fac7b4,
+                -12px -12px 0 #ffe1c9, -13px -13px 0 #ffe1c9, -14px -14px 0 #ffe1c9,
+                0px -10px 0 rgba(0,0,0,0.8), 0 8px 8px rgba(0,0,0,0.15);
+            }
+        </style>
+    </head>
+
+    <body>
+        <section>
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <div class="c3"></div>
+            <div class="c4"></div>
+        </section>
+
+        <section>
+            <h1>JelliBeans</h1>
+        </section>
+    </body>
+</html>

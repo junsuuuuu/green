@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <script>
+            var x = 10;
+            var y = 5;
+            var z = x + y;
+            document.write("z = " + z); //z = 15
+            document.write("z = ", z); //z = 15
+            document.write("z = " + z + 10); //z = 1510
+            document.write("z = ", z + 10); //z = 25
+            document.write("<br>");
+
+            let a = 10;
+            // let a = 15; //let은 한번만 선언할 수 있음
+            let b = 10;
+            let c = a + b;
+            document.write("z = ", z+10, "<br>", "c = ",c, "<br>");
+
+            const aa = 10;
+            // aa=10;//const는 따로 선언이 불가능, 처음 선언할때만
+            const bb = 5;
+            const cc = aa + bb;
+            document.write("cc =", cc);
+
+            console.log("z = ", z+10);
+
+            console.log("z = ", z+10, "\n", "c = ", c, "\n", "cc = ", cc);
+
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+</html>

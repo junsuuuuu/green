@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            /*
+            ul{
+                list-style: none;
+            }
+
+            li{
+                float: left;
+            }
+
+            a{
+                display: block;
+                text-decoration: none;
+                color: black;
+            }
+
+            a::after{
+                content: "|";
+                padding: 0 10px;
+            }
+
+            li:last-child a::after{
+                content: none;
+            }
+
+            a:hover{
+                color: red;
+                text-decoration: underline;
+            }
+
+            a:hover::after{
+                color: black;
+            }
+            */
+
+            ul{
+                display: flex;
+                list-style: none;
+            }
+
+            li{
+                float: left;
+            }
+
+            a{
+                display: block;
+                text-decoration: none;
+                color: black;
+            }
+
+            a::after{
+                display: inline-block;
+                content: "/";
+                padding: 0 10px;
+            }
+
+            li:last-child a::after{
+                content: none;
+            }
+
+            a:hover{
+                color: red;
+                text-decoration: underline;
+            }
+
+            a:hover::after{
+                color: black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <ul>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">JAPANESE</a></li>
+            <li><a href="#">CHINESE</a></li>
+            <li><a href="#">ITALIAN</a></li>
+        </ul>
+    </body>
+</html>

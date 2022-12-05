@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let inn = prompt("번호입력");
+        let out;
+
+        document.write(typeof inn , inn , "<br>");
+        innn = parseInt(inn, 10);
+        document.write(typeof innn , innn , "<br>");
+
+        if(inn == "02"){
+            out = "서울";
+        }
+        else if(inn == "042"){
+            out = "대전";
+        }
+        else if(inn == "051"){
+            out = "대구";
+        }else{
+            out = "미등록";
+        }
+        
+        document.write("입력한 지역은 " + out);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

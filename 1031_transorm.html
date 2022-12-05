@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .ex{
+                background-color: lightblue;
+                width: 200px;
+                height: 200px;
+                margin: 50px;
+            }
+
+            .ex1{
+                transform: translate(210px, 210px);
+            }
+
+            .ex2{
+                transform: scale(0.8, 0.5);
+            }
+
+            .ex3{
+                /*transform: rotate(90deg);*/
+                transform: rotateZ(60deg);
+            }
+
+            .ex4{
+                transform: skew(-20deg, 10deg);
+            }
+
+            .ex5{
+                transform: translate(20px, 50px) scale(0.5) ;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="ex ex1">
+            translate
+        </div>
+
+        <div class="ex ex2">
+            scale
+        </div>
+
+        <div class="ex ex3">
+            rotate
+        </div>
+
+        <div class="ex ex4">
+            skew
+        </div>
+
+        <div class="ex ex5">
+            translate scale
+        </div>
+    </body>
+</html>

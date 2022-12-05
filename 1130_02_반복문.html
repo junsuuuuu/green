@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let text = "";
+      let i = 0;
+      while (i < 10) {
+        text += i + " ";
+        i++;
+      }
+      document.write(text + "<br>");
+      document.write("<br>");
+
+      let text2 = "";
+      for (let i = 0; i < 10; i++) {
+        text2 += i + " ";
+      }
+      document.write(text2);
+      document.write("<br>");
+
+      let text3 = "";
+      let j = 0;
+      do {
+        text3 += "<br>The number is " + j;
+        j++;
+      } while (j < 10);
+      document.write(text3);
+      document.write("<br>");
+
+      let text4 = "";
+      let k = 9;
+      do {
+        text4 += "<br>The number is " + k;
+        k--;
+        if (k == 0) break;
+      } while (k < 10);
+      document.write(text4);
+      document.write("<br>");
+
+      let text5 = "";
+      let l = 0;
+      do {
+        if (l === 3) break;
+        text5 += "<br>The number is " + l;
+        l++;
+      } while (l < 10);
+      document.write(text5);
+      document.write("<br>");
+
+      let text6 = "";
+      let n = 0;
+      for (let n = 0; n < 10; n++) {
+        if (n === 3) continue;
+        text6 += "<br>The number is " + n;
+      }
+      document.write(text6);
+      document.write("<br>");
+    </script>
+  </head>
+  <body></body>
+</html>

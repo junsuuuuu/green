@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+
+        </style>
+
+        <script>
+            let a = 20;
+            let b = "20";
+            let c = 10;
+            let d = a == b;
+
+            document.write
+            ("a는 c보다 크거나, a는 b와 데이터,유형 모두 같다. : ", a > c || a === b, "<br>");
+            //논리합(or) || 
+            //하나라도 true면 true 반환, ture가 하나도 없으면 flase 반환
+
+            document.write
+            ("a는 c보다 크고, a는 b와 데이터,유형 모두 같다. : ", a > c && a === b, "<br>");
+            //논리곱(and) && 
+            //모두 true면 true 반환, 하나라도 false면 flase 반환
+
+            document.write
+            ("a는 c보다 크거나, a는 b와 데이터,유형 모두 같다. : ", !(a > c && a === b), "<br>");
+            //논리부정(not) !
+            //true면 false로, false면 true로 반환
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+</html>

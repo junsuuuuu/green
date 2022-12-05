@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            let name = "홍길동";
+            let kor = 80;
+            let eng = 90;
+            let math = 70;
+            let total = kor + eng + math;
+            document.write(name, "의 총점은 ", total, "점입니다.");
+            document.write("<br>");
+
+
+            const student = {
+                name : "홍길동",
+                kor : 80,
+                eng : 90,
+                math : 70,
+            };
+            student.total = student.kor + student.eng + student.math;
+            document.write(student.name, "의 총점은 ", student.total, "점입니다.");
+            document.write("<br>");
+
+
+            let student2 = {};
+            student2.name = "홍길동"; 
+            student2.kor = 100; 
+            student2.eng = 90; 
+            student2.math = 70;
+            student2.total = student2.kor + student2.eng + student2.math;
+            document.write(student2.name, "의 총점은 ", student2.total, "점입니다.");
+            document.write("<br>");
+            
+            
+            let student3 = new Object();
+            student3.name = "홍길동";
+            student3.kor = 100;
+            student3.eng = 90;
+            student3.math = 70;
+            student3.total = student3.kor + student3.eng + student3.math;
+            student3.fnc = function(){
+                document.write(student3.name, "의 총점은 ", student3.total, "점입니다.");
+                document.write("<br>");
+            }
+            student3.fnc();
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+</html>

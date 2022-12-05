@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <style>
+            body{
+                background-color: #fff9ec;
+                color: #504326;
+            }
+
+            ul{
+                list-style: none;
+            }
+
+            .wrap{
+                width: 300px;
+                margin: 100px auto;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .drop{
+                width: 300px;
+                height: 50px;
+                line-height: 50px;
+                background-color: white;
+            }
+            
+            .drop:hover .tr{
+                animation: tr 1s forwards;
+            }
+
+            .drop:hover ~ ul{
+                transform-origin: top;
+                animation: drop 0.5s forwards;
+            }
+
+            @keyframes tr{
+                0%{transform: rotate(0deg);}
+                100%{transform: rotate(45deg);}
+            }
+
+            @keyframes drop{
+                0%{transform: scaleY(0);}
+                100%{transform: scaleY(100%);}
+            }
+
+            .tr{
+                display: inline-block;
+                margin: 0 10px;
+            }
+
+            .wrap ul{
+                padding: 0;
+                transform: scaleY(0);
+            }
+
+            .wrap ul li{
+                width: 300px;
+                height: 50px;
+                line-height: 50px;
+                background-color: white;
+                padding-left: 10px;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div class="drop">
+                <span class="tr">+</span>
+                <span>DropDown Menu</span>
+            </div>
+        
+            <ul>
+                <li>menu01</li>
+                <li>menu02</li>
+                <li>menu03</li>
+            </ul>
+        </div>
+    </body>
+</html>

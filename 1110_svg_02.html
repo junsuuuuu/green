@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <style>
+            svg circle{
+                stroke-linecap: round;
+            }
+
+            svg{
+                transform: rotate(-60deg);
+            }
+
+            svg text{
+                transform: rotate(60deg);
+            }
+
+            svg:hover{
+                animation: ani 2s forwards;
+            }
+
+            @keyframes ani{
+                0%{stroke-dashoffset: 252;}
+                100%{stroke-dashoffset: 0;}
+            }
+        </style>
+    </head>
+
+    <body>
+        <svg width="300" height="300">
+            <circle cx="150" cy="150" r="40" 
+            stroke="black" stroke-width="8" fill="none"
+            stroke-dasharray="252" /> <!--dasharray는 원 둘레-->
+
+            <text x="185" y="-55" fill="#000">HTML</text>
+            <text x="190" y="-35" fill="#f00">90%</text>
+        </svg>
+    </body>
+</html>

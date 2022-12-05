@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let i = 1;
+      function prev() {
+        i--;
+        if (i < 1) {
+          i = 6;
+        }
+
+        document.getElementsByTagName("img")[0].src =
+          "images/photo" + i + ".jpg";
+      }
+
+      function next() {
+        i++;
+        if (i > 6) i = 1;
+        let a = document.getElementsByTagName("img")[0];
+        let b = a.getAttribute("src");
+        a.setAttribute("src", b.replace(b.slice(-5, -4), i));
+        console.log(b);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="btn">
+      <span onclick="prev()">이전</span>
+      <span onclick="next()">다음</span>
+    </div>
+
+    <img src="images/photo1.jpg" alt="photo" />
+  </body>
+</html>

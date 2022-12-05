@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        float: left;
+        width: 30%;
+        height: 300px;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+
+      li {
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+      }
+
+      li:hover {
+        background: #ccc;
+      }
+
+      div {
+        float: right;
+        width: 70%;
+        height: 300px;
+        line-height: 300px;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+        box-sizing: border-box;
+        transition: all 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li onmouseover="over(1)" onmouseout="out()">content1</li>
+      <li onmouseover="over(2)" onmouseout="out()">content2</li>
+      <li onmouseover="over(3)" onmouseout="out()">content3</li>
+    </ul>
+    <div id="text">content</div>
+
+    <script>
+      window.open("1201_01.html", "width=500, height=500");
+
+      let chcolor = ["red", "green", "blue"];
+      function over(a) {
+        document.getElementById("text").innerHTML = "content" + a;
+        document.getElementById("text").style.backgroundColor = chcolor[a - 1];
+        document.getElementById("text").style.fontSize = "40px";
+        document.getElementById("text").style.color = "white";
+      }
+
+      function out() {
+        document.getElementById("text").innerHTML = "content";
+        document.getElementById("text").style.backgroundColor = "white";
+        document.getElementById("text").style.fontSize = "16px";
+        document.getElementById("text").style.color = "black";
+      }
+    </script>
+  </body>
+</html>

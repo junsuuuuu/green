@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="">
+
+    </head>
+
+    <body>
+        <button onclick="show()">On</button>
+        <button onclick="hide()">Off</button>
+        <p id="content" class="con"></p>
+        <p>버튼</p>
+
+        <script>
+            let str = "<ul>";
+
+            for(var a = 1; a < 5; a++){
+                str += '<li><a href="#">' + '링크' + a + '</a></li>';
+            }str += "</ul>"
+
+            let text = document.getElementsByTagName("p")[1];
+            //해당 p를 불러오기 위함인데 script가 head에 있을때 오류가 발생했음.
+            //이유는 html내에 p태그가 show, hide 함수보다 늦게 나오는데, 자바스크립트는 순차적으로 해석하기 때문에 show 입장에서는 p태그가 없기 때문에 오류가 발생함. 그래서 임시적으로 script를 바디에, 그리고 최하단에 억지로 넣어서 동작시킴.
+            console.log(text);
+
+            function show(){
+                //.innerHTML = HTML에 넣을 무언가;
+                //document.getElementById("content").innerHTML = str; //id를 통해서
+
+                //document.getElementsByTagName("p")[0].innerHTML = str; 
+                //해당 p태그의 0번 (p태그중 첫번째)를 통해서
+
+
+
+                document.getElementsByClassName("con")[0].innerHTML = str;
+                //class con의 0번 (con 클래스중 첫번째 con 클래스)를 통해
+                text.style.display = "block";
+            }
+
+            function hide(){
+                document.getElementById("content").innerHTML = "";
+                text.style.display = "none";
+            }
+        </script>
+    </body>
+</html>

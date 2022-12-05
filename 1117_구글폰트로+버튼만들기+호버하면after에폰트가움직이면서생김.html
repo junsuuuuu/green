@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <!--구글폰트에서 web에 style을 복사함-->
+
+        
+
+        <style>
+            .btn{
+                padding: 10px 15px;
+                font-size: 20px;
+                color: white;
+                background: #ccc;
+                cursor: pointer;
+                border: none;
+            }
+
+            .btn:hover{
+                background-color: #ddd;
+            }
+
+            .btn:hover .text{
+                padding-right: 20px;
+            }
+
+            span{
+                vertical-align: middle;
+            }
+
+            .text{
+                position: relative;
+                top: 2px;
+                transition: all 0.5s;
+            }
+
+            .text::after{
+                position: absolute;
+                right: -20px;
+                content: "\00bb";
+                opacity: 0;
+                transition: all 0.5s;
+            }
+
+            .btn:hover .text::after{
+                right: 0;
+                opacity: 1;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <div class="icon">
+            <h4>Icon Buttons</h4>
+            <button class="btn">
+
+
+                <span class="material-symbols-outlined">home</span>
+                <!--구글폰트에서 web에 span을 복사함-->
+
+
+                <span class="text">Home</span>
+            </button> 
+
+            <button class="btn">
+                <span class="material-symbols-outlined">file_download</span>
+                <span class="text">Download</span>
+            </button> 
+        </div>
+    </body>
+</html>

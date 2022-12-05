@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let str = "123456-1234567";
+      let star = "*";
+
+      let str1 = str.slice(8); //234567
+      document.write(str.replace(str1, "******"), "<br>");
+      //str1->234567값을 ******로 변경하고 str를 출력
+
+      document.write(str.replace(str1, star.repeat(6)), "<br>");
+
+      let str2 = str.slice(0, 8);
+      document.write(str2, "******", "<br>");
+      document.write("<br>", "<br>");
+
+      let name = prompt("이름");
+      let number = prompt("번호");
+      let num = number.replace(number.slice(-4), "****");
+      document.write(name.toUpperCase(), "<br>", num);
+    </script>
+  </head>
+  <body></body>
+</html>

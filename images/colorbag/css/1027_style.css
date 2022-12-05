@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+/*header 시작*/
+header{
+    width: 100%;
+    height: 128px;
+    /*background 이미지가 화면을 꽉 채워야하기 때문에 width를 100%으로 지정함*/
+    background: url(../images/color_topbg.jpg);
+    /*background에 이미지를 넣기 위해 크기를 지정함*/
+}
+
+.top{
+    width: 1000px;
+    height: 65px;
+    /*gnb에 위치를 조절하기 위해 header와 .top에 height값을 지정함*/
+    margin: 0 auto;
+    text-align: center;
+    /*img는 인라인이기 때문에 text-align을 이용해 중심으로 이동*/
+    padding-top: 10px;
+    box-sizing: border-box;
+    /*padding을 넣으면 아래 gnb 이미지에도 영향이 가기 때문에 box-sizing에 border-box를 사용해 padding을 다른 박스에 영향을 주지 않도록 설정함*/
+}
+
+.top_mini{
+    display: flex;
+    justify-content: center;
+    /*li를 중심으로 이동시키기 위함*/
+}
+
+.top ul{
+    display: flex;
+    /*li를 가로로 정렬하기 위함*/
+}
+
+.gnb{
+    width: 1000px;
+    height: calc(100% - 64px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.gnb ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gnb ul li a::after{
+    content: url(../images/color_topmenuline.jpg);
+    /*menu를 구분짓는 이미지를 추가함*/
+}
+
+.gnb ul li:last-child a::after{
+    content: "";
+    /*li 마지막에는 이미지를 넣을 필요가 없기 때문에 content를 비워둠*/
+}
+/*header 끝*/
+
+
+/*visual 시작*/
+.visual{
+    width: 1000px;
+    margin: 10px auto;
+}
+
+.visual .bag li{
+    display: inline;
+    /*블럭은 줄바꿈 속성을 가지고 있어서 위치가 변형되는데 인라인을 줌으로써 줄바꿈에 자유롭게 설정함*/
+
+    /*
+    height: 377px;
+    position: absolute;
+    */ /*꼭 필요한 상황에만 사용하자!(다른 태그에 영향을 많이 줌)*/
+    /*li에 height값을 주게되면 아래에 .bag에 img는 블록임으로 2번째 3번째 이미지는 height값만큼 아래에 위치함, 그렇기 때문에 li에 height값이 필요한 상황이면 position을 사용해 위치를 다시 지정해야함(현재는 겹쳐진 상태)*/
+}
+
+.visual .bag img{
+    display: none;
+}
+
+.visual input:first-child:checked ~ .bag li:first-child img{
+    /*.visual에 첫번째 input이 checked되면 ~형제 중 .bag에 첫번째 li의 자식인 img에 적용*/
+    display: block;
+}
+
+.visual input:nth-child(2):checked ~ .bag li:nth-child(2) img{
+    display: block;
+}
+
+.visual input:nth-child(3):checked ~ .bag li:last-child img{
+    /*.visual에 last-child로 input을 찾으면 적용이 안됨, 이유는 visual를 기준으로 마지막 태그는 input이 아니고 ul이기 때문임. 그래서 nth를 사용해 정확한 위치를 입력하는 방법과, last-of-tpye을 사용해서 input의 마지막임을 정확하게 작성해야함*/
+    display: block;
+}
+
+input[type=radio]{
+    display: none;
+    /*radio가 선택되면 이미지를 표현하기 위해 만들었는데 현재 페이지에서는 radio를 id를 통해 연결한 input으로 표현하기 때문에 라디오가 보일 필요가 없는 페이지이기 때문에 display를 사용해 보이지 않게 설정함*/
+}
+
+.bag_text{
+    display: flex;
+}
+
+.bag_text li{
+    width: 33.333%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #9cc;
+}
+
+.bag_text li label:hover{
+    display: block;
+    background-color: #699;
+    cursor: pointer;
+    /*label은 인라인이여서 li에 hover하면 cursor가 변경되는데 택스트(label)에 올리면 cursor가 변경되지 않아 블록으로 변경함*/
+}
+/*visual 끝*/
+
+
+/*item 시작*/
+.item{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.item ul{
+    display: flex;
+    flex-wrap: wrap;
+    /*wrap는 공간보다 크면 줄바꿈을 위한 속성*/
+}
+
+.item li{
+    flex: 1 1 25%;
+    /*
+    flex-grow 부모 영역이 자식 영역보다 넓으면 남은 공간을 분배하는 비율
+    flex-shrink 부모 영역이 자식 영역보다 작을 경우 줄어드는 비율
+    flex-basis 항목의 기본 크기
+    */
+    text-align: center;
+}
+
+.item img{
+    width: 100%;
+    /*부모인 li의 크기에 맞춰 이미지도 크기를 동일하게 변경함*/
+}
+
+.item a{
+    color: #333;
+    font-size: 14px;
+}
+
+.item a:hover{
+    color: #699;
+}
+/*item 끝*/
+
+
+/*notice 시작*/
+.notice{
+    width: 1000px;
+    margin: 20px auto;
+}
+
+.notice>ul{
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+}
+
+.notice>ul>li:nth-child(2) ul{
+    display: flex;
+    margin-left: 100px;
+    height: 91px;
+    /*height를 넣은 이유는 아래 hover시 변경되는 이미지와 높이가 달라서 부자연스러운 모습을 해결하기 위함*/
+}
+
+.notice>ul>li:nth-child(2) ul li:first-child:hover{
+    content: url(../images/csbanner_over.jpg);
+}
+
+.notice>ul>li:nth-child(2) ul li:nth-child(2):hover{
+    content: url(../images/csbanner_over-02.jpg);
+}
+
+.notice>ul>li:nth-child(2) ul li:last-child:hover{
+    content: url(../images/csbanner_over-03.jpg);
+}
+/*notice 끝*/
+
+
+/*footer 시작*/
+.foot_top{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.foot_top ul{
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.foot_top ul a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.foot_bottom{
+    width: 1000px;
+    margin: 20px auto;
+    font-size: 14px;
+}
+/*footer 끝*/

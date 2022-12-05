@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            const arr = ["하나", 100, "둘", 200];
+            document.write(arr[0], "<br>");
+
+            const arr0 = ["하나", 100, "둘", 200, "하나", 100, "둘", 200, "하나", 100, "둘", 200, "하나", 100, "둘", 200, "하나", 100, "둘", "마지막값임"];
+            document.write(arr0.length, "<br>");
+            document.write(arr0[arr0.length-1], "<br>"); //해당 배열의 마지막 값을 가져오기 위함
+
+            const arr1 = [
+                "하나",
+                100,
+                "둘",
+                200
+            ];
+            document.write(arr1, " / ");
+            arr1[4] = "셋";
+            document.write(arr1, "<br>");
+
+            const arr2 = [];
+            arr2[0] = "하나";
+            arr2[1] = 100;
+            arr2[2] = "둘";
+            arr2[3] = 200;
+            arr2[4] = arr2.length;
+            document.write(arr2, "<br>");
+
+            const arr3 = new Array(4);
+            arr3[0] = "하나";
+            arr3[1] = 100;
+            arr3[2] = "둘";
+            arr3[3] = 200;
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+</html>

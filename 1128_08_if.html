@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <script>
+            let name = prompt("이름 입력");
+            let cm = prompt("키 입력");
+            let kg = prompt("몸무게 입력");
+            let bmi = kg/((cm*cm)*0.0001);
+            let a;
+
+            if(bmi >= 25){
+                a = "비만";
+            }
+            else if(bmi >= 23){
+                a = "과체중";
+            }
+            else if(bmi >= 18.5){
+                a = "정상";
+            }
+            else{
+                a = "저체중";
+            }
+            document.write(name + "님의 BMI 지수는 " + bmi.toFixed(3) + "로 " + a + "입니다.");
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+
+        </style>
+
+        <script>
+            for(let i = 1 ; i <= 5 ; i++){
+                for(let j = 0 ; j < i ; j++){
+                    document.write("*");
+                }
+                document.write("<br>");
+
+                if(i >= 5){
+                    for(let a = i ; a >= 0 ; a--){
+                        for(let b = 1 ; b < a ; b++){
+                            document.write("*");
+                        }
+                        document.write("<br>");
+                    }
+                }
+            }
+
+            for(let i = 5 ; i >= 1 ; i--){
+                for(let j = 0 ; j < i ; j++){
+                    document.write("*");
+                }
+                document.write("<br>");
+
+                if(i <= 1){
+                    for(let a = i ; a < 5 ; a++){
+                        for(let b = 0 ; b <= a ; b++){
+                            document.write("*");
+                        }
+                        document.write("<br>");
+                    }
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+</html>
+
+<!--
+      5%j=a  5-a=b   b/2=띄어쓰기
+00*00 5%4=1   5-1=4   4/2=2
+0***0 5%2=3   5-3=2   2/2=1
+***** 5%0=5   5-5=0   0/2=0
+0***0 5%2=3   5-3=2   2/2=1
+00*00 5%4=1   5-1=4   4/2=2
+-->

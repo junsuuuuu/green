@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <style>
+            body{
+                margin: 0 auto;
+                font-size: 30px;
+                text-align: center;
+            }
+
+            ul{
+                list-style: none;
+                padding: 0;
+                color: white;
+            }
+
+            a{
+                color: white;
+            }
+
+            .main>li{
+                display: block;
+                width: 100%;
+                padding: 20px 0;
+                background-color: black;
+                box-sizing: border-box;
+                border: 1px solid white;
+            }
+
+            .main span{
+                display: inline-block;
+                transform: rotate(0deg);
+            }
+
+            .main :target span{
+                animation: rotate 1s forwards;
+            }
+
+            @keyframes rotate{
+                0%{transform: rotate(0deg);}
+                100%{transform: rotate(45deg);}
+            }
+
+            .main ul{
+                display: none;
+                transform: scaleY(0);
+            }
+
+            .main :target ul{
+                display: block;
+                transform-origin: top;
+                animation: drop 1s forwards;
+            }
+
+            @keyframes drop{
+                0%{transform: scaleY(0%);}
+                100%{transform: scaleY(100%);}
+            }
+
+            .main ul li{
+                padding-left: 30px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <ul class="main">
+            <li class="a" id="tg_a">
+                <span>+</span>
+                <a href="#tg_a">a타겟</a>
+
+                <ul>
+                    <li>a1</li>
+                    <li>a2</li>
+                    <li>a3</li>
+                </ul>
+            </li>
+
+            <li class="b" id="tg_b">
+                <span>+</span>
+                <a href="#tg_b">b타겟</a>
+
+                <ul>
+                    <li>b1</li>
+                    <li>b2</li>
+                    <li>b3</li>
+                </ul>
+            </li>
+
+            <li class="c" id="tg_c">
+                <span>+</span>
+                <a href="#tg_c">c타겟</a>
+
+                <ul>
+                    <li>c1</li>
+                    <li>c2</li>
+                    <li>c3</li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

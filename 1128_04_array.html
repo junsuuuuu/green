@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <script>
+            const person = ["홍길동", 100, 10, 1];
+            document.write(person[0], "의 총점은 ", person[1]+person[2]+person[3], "점, 평균은 ", (person[1]+person[2]+person[3])/3, "점입니다.");
+            document.write("<br>");
+
+            const person1 = [];
+            person1[0] = "홍길동";
+            person1[1] = 200;
+            person1[2] = 20;
+            person1[3] = 2;
+            document.write(person1[0], "의 총점은 ", person1[1]+person1[2]+person1[3], "점, 평균은 ", (person1[1]+person1[2]+person1[3])/3, "점입니다.");
+            document.write("<br>");
+
+            const person2 = new Array(4);
+            person2[0] = "홍길동";
+            person2[1] = 300;
+            person2[2] = 30;
+            person2[3] = 3;
+            document.write(person2[0], "의 총점은 ", person2[1]+person2[2]+person2[3], "점, 평균은 ", (person2[1]+person2[2]+person2[3])/3, "점입니다.");
+            document.write("<br>");
+
+            const person3 = ["홍길동", 100, 80, 60];
+            person3[4] = person3[1] + person3[2] + person3[3];
+            person3[5] = (person3[1] + person3[2] + person3[3]) / 3;
+            document.write(person3[0], "의 총점은 ", person3[4], "점, 평균은 ", person3[5], "점입니다.");
+            document.write("<br>");
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+</html>

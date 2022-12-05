@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.top{
+    background-color: #666666;
+}
+
+.top_wrap{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.top_wrap ul{
+    display: flex;
+    justify-content: end;
+}
+
+.top_wrap li{
+    margin-left: 15px;
+}
+
+.top_wrap li:last-child{
+    margin-left: 5px;
+}
+
+.top_wrap a{
+    color: #d2d2d2;
+    font-size: 14px;
+}
+
+header{
+    height: 100px;
+    background-color: #161616;
+}
+
+.header_wrap{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.logo{
+    float: left;
+    padding-top: 15px;
+}
+
+.gnb{
+    float: right;
+    width: 600px;
+
+}
+
+.gnb ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.gnb li{
+    line-height: 100px;
+}
+
+.gnb li a{
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.imgs{
+    height: 400px;
+    background-color: #9a9a9a;
+}
+
+.imgs_wrap{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.imgs_wrap img{
+    position: absolute;
+}
+
+.contents{
+    background-color: #161616;
+    padding-bottom: 30px;
+}
+
+.con1{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.con1 ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.con1 li{
+    margin: 20px 0;
+}
+
+.con2{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.con2>ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.con2>ul li{
+    width: 466px;
+}
+
+.con2_gnb{
+    padding: 20px 0;
+}
+
+.con2_gnb h3{
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.con2_gnb a{
+    color: #ffffff;
+}
+
+.con2_gnb li{
+    float: left;
+    margin-top: 5px;
+}
+
+.font1{
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+}
+
+.font2{
+    font-size: 12px;
+    float: left;
+    margin-right: 10px;
+}
+
+.font3{
+    font-size: 12px;
+    float: left;
+    color: #9a9a9a;
+}
+
+footer{
+    background-color: #161616;
+    border-top: 1px solid #636363;
+    padding-bottom: 20px;
+}
+
+.footer_wrap{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.footer_wrap ul{
+    display: flex;
+    justify-content: center;
+}
+
+.footer_wrap li{
+    margin: 20px 10px 10px;
+}
+
+.footer_wrap a{
+    color: #9a9a9a;
+}
+
+.footer_wrap p{
+    text-align: center;
+    color: #9a9a9a;
+}

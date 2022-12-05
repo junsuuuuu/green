@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+
+        <link rel="stylesheet" href="css/all.css">
+        <!--all.css를 연결함(폰트어썸을 사용하기 위함)-->
+        <!--경로에 webfonts폴더와 해당 폴더에 사용할 아이콘 폰트가 있어야함-->
+        
+
+        <style>
+            .btn{
+                padding: 10px 15px;
+                font-size: 20px;
+                color: white;
+                background: #ccc;
+                cursor: pointer;
+                border: none;
+            }
+
+            .btn:hover{
+                background-color: #ddd;
+            }
+
+            .btn:hover span{
+                padding-right: 20px;
+            }
+
+            span{
+                position: relative;
+                transition: all 0.5s;
+            }
+
+            span::after{
+                position: absolute;
+                right: -20px;
+                content: "\00bb";
+                opacity: 0;
+                transition: all 0.5s;
+            }
+
+            .btn:hover span::after{
+                right: 0;
+                opacity: 1;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <div class="icon">
+            <h4>Icon Buttons</h4>
+            <button class="btn">
+                <i class="fa-solid fa-house-user"></i>
+                <span>Home</span>
+            </button>
+
+            <button class="btn">
+                <i class="fa-solid fa-trash"></i>
+                <span>Trash</span>
+            </button>
+
+            <button class="btn">
+                <i class="fa-solid fa-folder"></i>
+                <span>Folder</span>
+            </button>    
+        </div>
+    </body>
+</html>

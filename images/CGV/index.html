@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            a{
+                text-decoration: none;
+            }
+
+            .top{
+                width: 100%;
+                height: 30px;
+                background: url(image/bg_top.gif);
+            }
+
+            .top_wrap{
+                width: 1025px;
+                height: 312px;
+                margin: 0 auto;
+            }
+
+            .top_wrap ul{
+                float: right;
+            }
+
+            .top_wrap li{
+                float: left;
+                line-height: 30px;
+            }
+
+            .top_wrap li a{
+                color: #fff;
+                padding: 0 30px;
+            }
+
+            .body_wrap{
+                width: 1025px;
+                margin: 0 auto;
+            }
+
+            header{
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            header .logo{
+                float: left;
+                margin: 10px 0;
+                width: 110px;
+            }
+
+            header .menu{
+                float: right;
+            }
+
+            .menu ul li{
+                float: left;
+                line-height: 70px;
+            }
+
+            .menu li a{
+                display: block;
+                color: #e32213;
+                padding: 0 30px;
+                font-weight: bold;
+            }
+
+            .imgs{
+                width: 100%;
+            }
+            
+            .imgs img{
+                border-radius: 30px;
+            }
+
+            .event{
+                width: 100%;
+            }
+
+            .event li{
+                float: left;
+                width: 25%;
+                margin: 20px 0;
+            }
+
+            .event li:first-child{
+            }
+
+            .event li img{
+                margin-left: 44px;
+            }
+
+            .contetns{
+                width: 1025px;
+                height: 200px;
+            }
+
+            .con1{
+                float: left;
+                width: 50%;
+                height: 100%;
+            }
+
+            .con1 img{
+                float: right;
+                margin-right: 20px;
+            }
+
+            .con2{
+                float: left;
+                width: 50%;
+                height: 100%;
+            }
+
+            .con2 ul{
+                float: left;
+                width: 100%;
+            }
+
+            .con2 li{
+                float: left;
+                width: 100%;
+                color: #666;
+                margin-top: 15px;
+            }
+
+            .con2 .left{
+                display: block;
+                float: left;
+                color: #666;
+                width: 70%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+            .con2 .right{
+                display: block;
+                float: right;
+                color: #666;
+                width: 30%;
+                text-align: center;
+            }
+
+            footer{
+                float: left;
+                width: 100%;
+                height: 200px;
+                background-color: #d8b978;
+
+            }
+
+            .footer_wrap{
+                float: left;
+                width: 1025px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="top">
+            <div class="top_wrap">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">English</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="body_wrap">
+            <header>
+                <div class="logo"><img src="image/logo.gif" alt="logo"></div>
+    
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">영화예매</a></li>
+                        <li><a href="#">신작개봉</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">CGV매점</a></li>
+                    </ul>
+                </div>
+            </header>
+    
+            <div class="imgs">
+                <img src="image/visual.jpg" alt="visual">
+            </div>
+    
+            <div class="event">
+                <ul>
+                    <li><img src="image/img01.png" alt="1"></li>
+                    <li><img src="image/img02.png" alt="2"></li>
+                    <li><img src="image/img03.png" alt="3"></li>
+                    <li><img src="image/img04.png" alt="4"></li>
+                </ul>
+            </div>
+    
+            <div class="contents">
+                <div class="con1">
+                    <h2>이벤트</h2>
+                    <img src="image/banner.jpg" alt="banner">
+                </div>
+    
+                <div class="con2">
+                    <h2>공지사항</h2>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p class="left">공지사항 제목이 들어갑니다.</p>
+                                <p class="right">2018-08-07</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p class="left">공지사항 제목이 들어갑니다.</p>
+                                <p class="right">2018-08-07</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p class="left">공지사항 제목이 들어갑니다.</p>
+                                <p class="right">2018-08-07</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p class="left">공지사항 제목이 들어갑니다.</p>
+                                <p class="right">2018-08-07</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p class="left">
+                                    공지사항 제목이 들어갑니다.공지사항 제목이 들어갑니다.
+                                    공지사항 제목이 들어갑니다.공지사항 제목이 들어갑니다.
+                                </p>
+                                <p class="right">2018-08-07</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer_wrap">All Copyrights Reserved.</div>
+        </footer>
+    </body>
+</html>

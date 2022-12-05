@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <style>
+            .ladybug{
+                position: relative;
+                width: 288px;
+                height: 320px;
+                border-radius: 50%;
+                margin: 200px auto 0;
+                border: 1px solid #000;
+
+                background: 
+                radial-gradient(rgba(0,0,0,1) 30%, transparent 33%, transparent 100%)
+                /*0~30%는 검정색, 30~33%는 검정에서 투명으로 그라디언트, 33~100%까지는 투명*/
+                ,radial-gradient(rgba(0,0,0,1) 50%, transparent 55%, transparent 100%)
+                ,radial-gradient(rgba(0,0,0,1) 50%, transparent 55%, transparent 100%)
+                ,radial-gradient(rgba(0,0,0,1) 40%, transparent 43%, transparent 100%)
+                ,radial-gradient(rgba(0,0,0,1) 40%, transparent 43%, transparent 100%)
+                ,radial-gradient(rgba(0,0,0,1) 45%, transparent 50%, transparent 100%)
+                ,radial-gradient(rgba(0,0,0,1) 45%, transparent 50%, transparent 100%);
+                
+                background-position: 
+                105px 32px, 
+                48px 96px, 
+                160px 96px,
+                144px 176px,
+                64px 176px,
+                176px 240px,
+                32px 240px;
+                /*위 background에 그라디언트로 만든 원형의 위치를 순서대로 지정*/
+
+                background-color: #e11;
+                /*background 순서를 신경써야함(색상은 color로 넣었는데, 위와 같이 background로만 적용하면 아래에 하나만 적용되기 때문에 구분을 위해 color로 사용*/
+                background-repeat: no-repeat;
+
+                background-size: 80px 80px; /*background에서 생성한 원형의 크기*/
+            }
+
+            .ladybug::before{
+                position: absolute;
+                top: -38px;
+                left: 48px;
+                display: block;
+                content: "";
+                width: 192px;
+                height: 80px;
+                background: #000;
+                border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+                              /*가로       / 세로*/
+                              /*왼위 오위 오아 왼아 순서*/
+            }
+
+            .ladybug::after{
+                position: absolute;
+                top: -16px;
+                left: 80px;
+                display: block;
+                content: "";
+                width: 16px;
+                height: 16px;
+                background: #000;
+                border-radius: 50%;
+                box-shadow: /*16*16으로 만들어진 블록(after)에 그림자로 모양을 만듬*/
+                0 0 0 16px #fff,
+                0 0 0 20px #000,
+                /*위는 왼쪽 눈을 아래는 오른쪽 눈을 만듬*/
+                112px 0 0 0 #000,
+                112px 0 0 16px #fff,
+                112px 0 0 20px #000,
+
+                /*아래는 오른쪽 다리*/
+                192px 80px 0 3px #000,
+                216px 176px 0 3px #000,
+                192px 264px 0 3px #000,
+                /*아래는 왼쪽 다리*/
+                -80px 80px 0 3px #000, 
+                -104px 176px 0 3px #000, 
+                -80px 264px 0 3px #000;
+            }
+
+            
+            .ladybug:hover{
+                animation: ladybug 1s infinite; /*호버시 ladybug 애니메이션 실행*/
+            }
+            @keyframes ladybug{
+                0%{ /*기존 위치*/
+                    background-position:
+                    105px 32px, 
+                    48px 96px, 
+                    160px 96px,
+                    144px 176px,
+                    64px 176px,
+                    176px 240px,
+                    32px 240px;
+                }
+
+                50%{ /*중심으로 모이는 위치*/
+                    background-position: 105px 128px;
+                }
+
+                100%{ /*기존 위치*/
+                    background-position: 
+                    105px 32px, 
+                    48px 96px, 
+                    160px 96px,
+                    144px 176px,
+                    64px 176px,
+                    176px 240px,
+                    32px 240px;;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="ladybug"></div>
+    </body>
+</html>

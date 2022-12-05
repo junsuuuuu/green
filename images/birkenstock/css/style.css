@@ -1,0 +1,238 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    font-family: Arial, "맑은 고딕", sans-serif;
+}
+
+.top{
+    background-color: #003f85;
+}
+
+.top_wrap{
+    width: 100%;
+    max-width: 1182px;
+    margin: 0 auto;
+    padding: 5px 0;
+    display: flex;
+    justify-content: end;
+    background-color: #003f85; 
+    /*top에도 배경색이 있는데 wrap에도 적용한 이유는 창모드에서 사이즈를 줄이고 슬라이드바가 생겼을때 top에만 배경색이 있으면 드래그시 배경색이 끊어져 보이기 때문*/
+}
+
+.top_wrap ul{
+    display: flex;
+}
+
+.top_wrap ul li a{
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.top_wrap ul li a:hover{
+    text-decoration: underline;
+}
+
+.top_wrap ul li a::after{
+    display: inline-block; /*hover시 /에 밑줄이 생기는 것을 방지하기 위함*/
+    content: "/";
+    padding: 0 10px;
+}
+
+.top_wrap ul li:last-child a::after{
+    content: "";
+}
+
+.logo{
+    width: 100%;
+    max-width: 1182px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.gnb, .visual{
+    width: 100%;
+    max-width: 837px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+.gnb ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.gnb a{
+    text-transform: uppercase;
+}
+
+.visual{
+    height: 150px;
+}
+
+.visual img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
+}
+
+.icon{
+    width: 100%;
+    max-width: 837px;
+    margin: 0 auto;
+}
+
+.icon ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icon ul li{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.icon ul li:hover p{
+    display: block;
+}
+
+.icon p{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #003f85;
+    border-radius: 50%;
+    left: 3px;
+    top: 4px;
+    background: #fff;
+    text-align: center;
+    line-height: 100px;
+    display: none;
+    text-transform: uppercase; /*대소문자 조절*/
+    letter-spacing: -1px; /*자간*/
+}
+
+.item{
+    width: 100%;
+    max-width: 1182px;
+    margin: 60px auto 20px;
+}
+
+.item ul{
+    display: flex;
+}
+
+.item li{
+    position: relative;
+    cursor: pointer;
+}
+
+.item li:hover p{
+    display: block;
+}
+
+.item img{
+    width: 394px;
+    height: 333px;
+}
+
+.item p{
+    position: absolute;
+    width: 394px;
+    height: 333px;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 0;
+    text-align: center;
+    color: #ffffff;
+    display: none;
+    padding: 150px 0 0 0;
+    box-sizing: border-box;
+}
+
+.banner{
+    width: 100%;
+    max-width: 1182px;
+    height: 313px;
+    margin: 0 auto;
+}
+
+.banner ul{
+    display: flex;
+}
+
+.banner li:first-child{
+    height: 313px;
+    background-color: #eee;
+    padding: 120px 19px 0 90px;
+    box-sizing: border-box;
+}
+
+.banner p{
+    text-align: right;
+    color: #003f85;
+    font-size: 14px;
+}
+
+.banner a{
+    display: block;
+    color: #003f85;
+    text-align: right;    
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.banner b{
+    font-size: 16px;
+}
+
+.banner strong{
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.foot{
+    background-color: #002856;
+}
+
+.foot_wrap{
+    width: 1182px;
+    margin: 0 auto;
+    padding: 20px 0;
+    background-color: #002856;
+}
+
+.foot_wrap ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot_wrap p{
+    color: #ffffff;
+    line-height: 30px;
+    font-style: italic;
+}
+
+.foot_wrap span{
+    text-transform: uppercase;
+}
+
+.foot_wrap li ul li{
+    margin-left: 15px;
+}

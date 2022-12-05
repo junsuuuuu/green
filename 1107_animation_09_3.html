@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script:400"rel="stylesheet">
+        <title>animation</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            body {
+                background: #333;
+            }
+
+            a.banner{
+                display: block;
+                width: 728px;
+                height: 176px;
+                border: 1px solid #555;
+                text-align: center;
+                font-family: 'Nanum Pen Script', cursive;
+                text-decoration: none;
+                animation: move 2s forwards;
+            }
+
+            @keyframes move{
+                0%{
+                    background: 
+                url(images/banner_logo.png) no-repeat 300px 20px,
+                url(images/banner_photo.png) no-repeat -300px 10px, 
+                url(images/banner_09.png) no-repeat 20px -400px, 
+                url(images/banner_bg.png) no-repeat 0 0;
+                }
+
+                100%{
+                    background: 
+                url(images/banner_logo.png) no-repeat 550px 20px,
+                url(images/banner_photo.png) no-repeat -40px 10px, 
+                url(images/banner_09.png) no-repeat 20px -30px, 
+                url(images/banner_bg.png) no-repeat 0 0;
+                }
+            }
+
+            a.banner img{
+                position: absolute;
+                top: 130px;
+                left: 300px;
+                animation: movee 1s infinite 0.7s;
+            }
+
+            @keyframes movee{
+                0%{
+                    left: 300px;
+                }
+                100%{
+                    left: 350px;
+                }
+            }
+
+            a.banner span{
+                display: block;
+                opacity: 0;
+                left: 0;
+                top: 0;
+                font-size: 40px;
+                color: white;
+                animation: moveee 2s forwards;
+            }
+
+            @keyframes moveee{
+                0%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <a href="#" class="banner">
+            <img src="images/banner_arrow.png" alt="arrow">
+            <span>Animation banner design<br>웹 폰트를 활용한 스타일</span>
+        </a>
+    </body>
+</html>

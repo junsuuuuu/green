@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+        </style>
+    </head>
+
+    <body>
+        <img src="images/2-22.jpg" alt="지도" usemap="#mmap">
+        <!--usemap에 지정할 맵 이름으로 생성-->
+        <map name = "mmap">
+            <area shape="rect" coords="141, 261, 183, 285" 
+            href="https://www.daejeon.go.kr/" alt="대전">
+            <!--shape에 모양을-->
+            <!--coords에 좌표 지점1에 x축, y축, 지점2에 x축, y축-->
+
+
+            <area shape="circle" coords="90, 510, 30" 
+            href="https://www.daejeon.go.kr/" alt="대전">
+            <!--x축, y축, 두 축을 기준으로 해당 수치만큼 원으로 범위지정-->
+
+
+            <area shape="poly" coords="50, 180, 50, 150, 200, 75, 350, 150, 350, 180" 
+            href="https://www.daejeon.go.kr/" alt="대전">
+        </map>
+    </body>
+</html>

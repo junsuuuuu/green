@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            ul{
+                list-style: none;
+            }
+            a{
+                text-decoration: none;
+            }
+            body{
+                background: #474e5d;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .wrap{
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            .wrap::after{ /*중심선을 만들기 위함*/
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                height: 100%;
+                border-right: 5px solid white;
+            }
+            .container{
+                position: relative;
+                padding: 10px 40px;
+                width: 50%;
+            }
+            .container::after{ 
+                /*각각의 컨테이너 옆에 중심선과 맞닿는 원형을 생성
+                컨테이너는 left와 right로 중복 클래스가 존재함. 이곳에서 만든 원형을
+                아래에 left, right::after에서 위치를 조정했음(left, right의 원은 같아도 위치는 다르기 때문)*/
+                content: "";
+                position: absolute;
+                /*크기를 줬는데도 형태가 생기지 않으면 블록속성이나 포지션 등을 사용해야함*/
+                top: 15px;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                border: 4px solid orange;
+                background: white;
+                z-index: 1;
+            }
+            .left{
+                left: 0;
+            }
+            .left::before{ /*border로 화살표를 모양을 만듬*/
+                content: "";
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                width: 0;
+                height: 0;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                border-left: 10px solid white;
+                border-right: 10px solid transparent;
+            }
+            .left::after{ /*컨테이너에서 만든 원형의 위치를 조정*/
+                right: -19px;
+            }
+            .right{
+                left: 50%;
+            }
+            .right::before{
+                content: "";
+                position: absolute;
+                left: 20px;
+                top: 20px;
+                width: 0;
+                height: 0;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                border-left: 10px solid transparent;
+                border-right: 10px solid white;
+            }
+            .right::after{ /*container::after를 조절한 것(container면서 right인 것만)*/
+                left: -14px; 
+            }
+            .content{
+                background: #fff;
+                padding: 20px 30px;
+                border-radius: 6px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div class="container left">
+                <div class="content">
+                    <h2>2017</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+            </div>
+
+            <div class="container right">
+                <div class="content">
+                    <h2>2016</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+            </div>
+
+            <div class="container left">
+                <div class="content">
+                    <h2>2015</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+            </div>
+
+            <div class="container right">
+                <div class="content">
+                    <h2>2014</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+            </div>
+
+            <div class="container left">
+                <div class="content">
+                    <h2>2013</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+            </div>
+
+            <div class="container right">
+                <div class="content">
+                    <h2>2012</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

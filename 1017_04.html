@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            a{
+                color: #000;
+                text-decoration: none;
+            }
+
+            body{
+                width: 1000px;
+                margin: 0 auto;
+            }
+
+            header{
+                width: 1000px;
+            }
+
+            h1{
+                margin: 10px 0;
+            }
+
+            .header_wrap{
+                width: 100%;
+                background-color: #003466;
+            }
+
+            ul{
+                position: relative;
+                height: 70px;
+                z-index: 2;
+            }
+
+            ul li{
+                float: left;
+            }
+
+            ul li:first-child{
+                background-color: #fe0002;
+            }
+
+            ul li a{
+                display: block;
+                color: #ffffff;
+                padding: 0 30px;
+                line-height: 70px;
+            }
+
+            ul li a:hover{
+                background-color: #fe0002;
+            }
+
+            .main_img{
+                position: relative;
+                width: 1000px;
+                height: 360px;
+            }
+
+            .main_img a{
+                position: absolute;
+                top: -71px;
+                z-index: 1;
+            }
+
+            .main_img img{
+                width: 1000px;
+                height: 360px;
+            }
+
+            .contents{
+                width: 1000px;
+                height: 450px;
+            }
+
+            .con1{
+                float: left;
+                width: 650px;
+                height: 450px;
+            }
+
+            .con2{
+                float: left;
+                width: 350px;
+                height: 450px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>The Growth Clinic Story</h1>
+            <div class="header_wrap">
+                <ul>
+                    <li><a href="#">Information</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Clinic Test</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="main_img">
+            <a href="#">
+                <img src="images/clinic story/images/bg_main.png" alt="메인이미지">
+            </a>
+        </div>
+
+        <div class="contents">
+            <div class="con1"></div>
+            <div class="con2"></div>
+        </div>
+
+        <footer>
+
+        </footer>
+    </body>
+</html>

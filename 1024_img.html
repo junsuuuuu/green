@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .banner{
+                width: 1200px; /*이미지보다 크기가 크면 빈 공간을 반복해서 채움 (설정가능)*/
+                height: 500px; /*이미지보다 작게 크기를 설정하면 이미지가 잘림*/
+                border: 1px solid black;
+            }
+
+            .banner:first-of-type{ /*first-child를 못쓰는 이유는 현재 html에 바디를 기준으로 첫번째가 picture이기 때문에 적용이 안됨, 그래서 배너라는 이름을 가지고있는 첫번째를 선택하기 위해서는 이처럼 오브 타입을 사용해야함*/
+                background-image: url(images/photo6.jpg);
+                background-size: contain; /*작은거에 맞춰 비율을 유지*/
+                background-size: cover; /*큰거에 맞춰서 작은 부분이 잘림*/
+                /*background-repeat: repeat; */
+                background-repeat: no-repeat; /*빈 공간을 반복해서 채울지 여부*/
+                background-position: left top; /*사진의 기준을 정해줌*/
+                /*background-position: 50%; /*수치로 조절 가능*/
+            }
+
+            /*
+            .banner:nth-of-type(2){ 
+                width: 100px; 공간을 정의하는것이고(div) 이미지를 변경한 것이 아님
+                text-align: center;
+                line-height: 500px;
+                overflow: hidden;
+            }
+            */
+            
+            .banner:nth-of-type(2) img{ /*img를 타겟해줘야 이미지 크기가 변경됨*/
+                width: 100%;
+                height: 100%;
+                object-fit: scale-down;
+                object-position: left top;
+            }
+        </style>
+    </head>
+
+    <body>
+        <picture> <!--해상도에 따라 이미지를 변경하고자-->
+            <source media="(min-width:1280px)" srcset="images/photo1.jpg"> <!--1280이상이면-->
+
+            <source media="(min-width:1024px)" srcset="images/photo2.jpg"> <!--1024이상이면-->
+
+            <source media="(min-width:768px)" srcset="images/photo3.jpg"> <!--768이상이면-->
+
+            <source media="(min-width:510px)" srcset="images/photo4.jpg"> <!--510이상이면-->
+
+            <img src="images/photo5.jpg" alt="1">
+            <!--그 외-->
+        </picture> 
+
+        <div class="banner"></div>
+
+        <div class="banner"><img src="images/photo6.jpg" alt="1"></div>
+    </body>
+</html>

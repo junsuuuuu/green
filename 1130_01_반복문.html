@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let text = "";
+      let obj = { name: "홍길동", age: 20, gender: "남" };
+      for (let x in obj) {
+        //obj에 있는 속성반환
+        text += x + " ";
+      }
+      document.write(text + "<br>");
+
+      let text1 = "";
+      for (let x in obj) {
+        //obj에 있는 속성반환
+        text1 += x + " ";
+      }
+      document.write(text1 + "<br>");
+
+      let text2 = "";
+      for (let x in obj) {
+        //obj에 있는 데이터반환
+        text2 += obj[x] + " ";
+      }
+      document.write(text2 + "<br>");
+
+      let text3 = "";
+      let arr = [40, 50, 2, 4, 10];
+      for (let x in arr) {
+        //arr에 있는 인덱스번호 반환(배열의 순서)
+        text3 += x + " ";
+      }
+      document.write(text3 + "<br>");
+    </script>
+  </head>
+  <body></body>
+</html>

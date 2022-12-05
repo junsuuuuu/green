@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .wrap{
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                border: 1px solid black;
+                overflow: hidden;
+            }
+
+            .wrap>div{
+                float: left;
+                width: 33.333%;
+            }
+
+            .wrap>div:first-child{
+                background-color: rgb(220, 220, 220);
+            }
+
+            .wrap>div:nth-child(2){
+                background-color: rgb(150, 150, 150);
+            }
+            .wrap>div:last-child{
+                background-color: rgb(70, 70, 70);
+            }
+
+            
+            .wrap1>div:first-child{
+                float: left;
+            }
+
+            .wrap1>div:last-child{
+                float: right;
+            }
+
+            .wrap1>div:nth-child(2){
+                clear:both;
+                width: 50px;
+                margin: 0 auto;
+            }
+
+            .wrap1>div{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+            <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>
+            <div>ㅂㅈㄷㅂㅈㄷ</div>
+        </div>
+
+        <div class="wrap1">
+            <div>첫번째</div>
+            <div>두번째</div>
+            <div>세번째</div>
+        </div>
+    </body>
+</html>

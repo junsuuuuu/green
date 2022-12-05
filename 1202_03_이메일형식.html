@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   let a = "abcdefff";
+      //   document.write(a.search("f"), a.indexOf("f", 6), "<br>");
+
+      let userEmail = prompt("이메일 입력");
+      let arr = [".com", ".co.kr", ".net", ".or.kr", ".go.kr", ".ac.kr"];
+
+      let check1 = false;
+      if (userEmail.indexOf("@") > 0) {
+        //indexOf에서 못찾으면 -1를 반환함
+        check1 = true;
+      }
+
+      let check2 = false;
+      for (let i = 0; i <= arr.length; i++) {
+        if (userEmail.indexOf(arr[i]) > 0) {
+          check2 = true;
+        }
+      }
+
+      if (check1 && check2) {
+        document.write(userEmail);
+      } else {
+        alert("형식이 잘못됨");
+        location.reload();
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

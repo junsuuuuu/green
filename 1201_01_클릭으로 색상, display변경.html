@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .tabcontent {
+        color: white;
+        padding: 50px;
+        text-align: center;
+      }
+
+      .tablink {
+        float: left;
+        width: 25%;
+        background: #555;
+        text-align: center;
+        padding: 10px 0;
+        cursor: pointer;
+      }
+
+      .tablink:hover {
+        background: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabcontent">
+      <h1>conetent1</h1>
+    </div>
+
+    <div class="tabcontent">
+      <h1>conetent2</h1>
+    </div>
+
+    <div class="tabcontent">
+      <h1>conetent3</h1>
+    </div>
+
+    <div class="tabcontent">
+      <h1>conetent4</h1>
+    </div>
+
+    <p class="tablink" onclick="tab(0)">conten1</p>
+    <p class="tablink" onclick="tab(1)">conten2</p>
+    <p class="tablink" onclick="tab(2)">conten3</p>
+    <p class="tablink" onclick="tab(3)">conten4</p>
+
+    <script>
+      let chcolor = ["red", "green", "blue", "orange"];
+      let content = document.getElementsByClassName("tabcontent");
+      let btn = document.getElementsByClassName("tablink");
+
+      function tab(a) {
+        // for (let i = 0; i <= 3; i++) {
+        //   content[i].style.backgroundColor = chcolor[i];
+        //   btn[i].style.backgroundColor = chcolor[i];
+        //   content[i].style.display = "none";
+        // }
+        // content[a].style.display = "block";
+
+        let i = 0;
+        do {
+          content[i].style.backgroundColor = chcolor[i];
+          btn[i].style.backgroundColor = chcolor[i];
+          content[i].style.display = "none";
+          i++;
+        } while (i <= 3);
+        content[a].style.display = "block";
+      }
+
+      tab(0);
+    </script>
+  </body>
+</html>

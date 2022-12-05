@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .bg{  
+                list-style: none;
+                height: 250px;
+                background-image: url(images/img_flwr.gif), 
+                url(images/img_flwr.gif), url(images/paper.gif); 
+                /*하나의 태그에 여러 이미지를 넣어야기때문에 속성 하나에 넣어줘야함
+                (페이퍼는 세가지 사진 중 제일 밑에 있어야하기 때문에 맨 뒤에 배치)*/
+                background-repeat: no-repeat, no-repeat, repeat;
+                background-position: top left, bottom right;
+                background-size: 100px, 50px;
+                padding: 50px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <ul class="bg"> 
+            <!--블록은 background-image 위에 텍스트가 안적히기 때문에 인라인으로-->
+            <li><h1>qweqwe</h1></li>
+            <li>qweqweqwe</li>
+        </ul>
+    </body>
+</html>

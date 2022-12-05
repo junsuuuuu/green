@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+        * { margin: 0; padding: 0; }
+        ul { list-style: none; }
+        a { text-decoration: none; }
+        body { background: radial-gradient(#364d58, #000); }
+    
+
+        #bar { width: 800px; margin: 40px auto; } 
+        #bar li { cursor: pointer; } 
+        #bar li .left { background: rgba(213,238,241,0.5); float: left; width: 40px; height: 100px; margin-left: 10px; border-radius: 40px/100px; transition: 0.5s; } 
+        .left img { margin-left: 10px; margin-top: 15px; } 
+        #bar li .right { width: 50px; height: 100px; border-radius: 40px/100px; background: linear-gradient(-90deg, #97a7a9, #b8cbcd); margin: 10px 0; transition: 0.5s; }
+
+        .infobox { padding: 40px 0 0 600px; } 
+        .infobox h3 { font: 1em Georgia, Times, serif; color: #fff; } 
+
+        #iphone:hover .left { background: #1f81ac; margin-left: 160px; } 
+        #iphone:hover .right { width: 200px; background: linear-gradient(-90deg, #1a6c90, #14506b); } 
+
+        #macbook:hover .left { background: #bc003c; margin-left: 200px; } 
+        #macbook:hover .right { width: 240px; background: linear-gradient(-90deg, #9d0032, #7a0027); } 
+
+        #ipod:hover .left { background: #d98f23; margin-left: 270px; } 
+        #ipod:hover .right { width: 310px; background: linear-gradient(-90deg, #b6781e, #916018); } 
+
+        #cinema:hover .left { background: #7da864; margin-left: 110px; } 
+        #cinema:hover .right { width: 150px; background: linear-gradient(-90deg, #698d54, #506b40); } 
+        
+        #macmini:hover .left { background: #3f1150; margin-left: 130px; } 
+        #macmini:hover .right { width: 170px; background: linear-gradient(-90deg, #340e43, #1a0721); }
+        </style>
+    </head>
+
+    <body>
+        <ul id="bar">
+            <li id="iphone">
+                <div class="left">
+                    <img src="images/iphone.png" alt="iphone">
+                </div>
+                <div class="right">
+                    <div class="infobox"><h3>iPhone</h3></div>
+                </div>
+            </li>
+
+            <li id="macbook">
+                <div class="left">
+                    <img src="images/macbook.png" alt="macbook">
+                </div>
+                <div class="right">
+                    <div class="infobox"><h3>MacBook</h3></div>
+                </div>
+            </li>
+
+            <li id="ipod">
+                <div class="left">
+                    <img src="images/ipod.png" alt="ipod">
+                </div>
+                <div class="right">
+                    <div class="infobox"><h3>iPod</h3></div>
+                </div>
+            </li>
+
+            <li id="cinema">
+                <div class="left">
+                    <img src="images/cinema.png" alt="cinema">
+                </div>
+                <div class="right">
+                    <div class="infobox"><h3>Cinema Display</h3></div>
+                </div>
+            </li>
+
+            <li id="macmini">
+                <div class="left">
+                    <img src="images/macmini.png" alt="macmini">
+                </div>
+                <div class="right">
+                    <div class="infobox"><h3>MacMini</h3></div>
+                </div>
+            </li>
+        </ul>
+    </body>
+</html>

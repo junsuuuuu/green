@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            ul{
+                list-style: none;
+            }
+            a{
+                text-decoration: none;
+            }
+
+            .grid-container{
+                width: 1200px;
+                margin: 50px auto;
+                background: #ddd;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 100px 300px 200px 100px;
+            }
+
+            .grid-item{
+                background: #ccc;
+                border: 1px solid black;
+            }
+
+            .grid-item:nth-child(1){
+                position: relative;
+                z-index: 1;
+                display: grid;
+                grid-column: 1/4;
+                grid-row: 1/2;
+                background-color: #aaa;
+                grid-template-columns: 200px auto;
+                grid-template-rows: 40px;
+                align-content: center;
+            }
+
+            .main{
+                float: right;
+                margin-right: 50px;
+            }
+
+            .main>li{
+                float: left;
+            }
+
+            .main>li>a{
+                display: block;
+                width: 150px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                background-color: #fff;
+                border-top: 1px solid black;
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
+            }
+
+            .main>li:first-child >a{
+                border-left: 1px solid black;
+            }
+
+            .main>li:hover >a{
+                background-color: black;
+                color: white;
+            }
+
+            .sub{
+                background-color: #fff;
+                height: 0;
+                transition: all 1s;
+                overflow: hidden;
+            }
+            .main:hover .sub{
+                height: 160px;
+            }
+
+            .main:hover .sub{
+                border-bottom: 1px solid black;
+            }
+
+            .left{
+                border-left: 1px solid black;
+            }
+
+            .right{
+                border-right: 1px solid black;
+            }
+
+            .sub>li>a{
+                display: block;
+                width: 150px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                background-color: #fff;
+            }
+
+            .sub>li>a:hover{
+                background-color: black;
+                color: white;
+            }
+
+            .grid-item:nth-child(2){
+                grid-column: 1/4;
+                grid-row: 2/3;
+                background-color: #bbb;
+            }
+
+            .grid-item:nth-child(2) ul{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            @keyframes slide{
+                0%{
+                    top: 0px;
+                }
+
+                100%{
+                    top: 300px;
+                }
+
+            }
+
+            .grid-item:nth-child(2) li:nth-child(1){
+                position: absolute;
+                top: 0;
+                left: 0;
+                animation: slide 1s 9s forwards;
+            }
+
+            .grid-item:nth-child(2) li:nth-child(2){
+                position: absolute;
+                top: 0;
+                left: 0;
+                animation: slide 1s 6s forwards;
+
+            }
+
+            .grid-item:nth-child(2) li:nth-child(3){
+                position: absolute;
+                top: 0;
+                left: 0;
+                animation: slide 1s 3s forwards;
+
+            }
+
+            .grid-item:nth-child(2) img{
+                width: 100%;
+                height: 100%;
+            }
+
+            .grid-item:nth-child(3){
+                grid-column: 1/2;
+                grid-row: 3/4;
+                background-color: #ccc;
+            }
+
+            input[type=radio]{
+                display: none;
+            }
+
+            .grid-item:nth-child(3) label{
+                display: inline-block;
+                width: 70px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                background-color: #0f0;
+                margin-left: 5px;
+                margin-top: 5px;
+            }
+
+            .con1, .con2{
+                display: none;
+            }
+
+            .con1{
+                margin-top: 15px
+            }
+
+            .con1 a{
+                font-size: 14px;
+                margin-left: 7px;
+            }
+
+            .con1 span{
+                float: right;
+                margin-right: 7px;
+            }
+
+            .con2 img{
+                float: left;
+                width: 30%;
+                margin-top: 25px;
+                margin-left: 2.5%;
+            }
+
+            #one:checked ~ .con1{
+                display: block;
+            }
+
+            #two:checked ~ .con2{
+                display: block;
+            }
+
+            .grid-item:nth-child(4){
+                grid-column: 2/3;
+                grid-row: 3/4;
+                background-color: #ddd;
+            }
+
+            .grid-item:nth-child(5){
+                grid-column: 3/4;
+                grid-row: 3/4;
+                background-color: #eee;
+            }
+
+            .grid-item:nth-child(6){
+                display: grid;
+                grid-template-columns: 200px auto 200px;
+                grid-template-rows: 40px;
+                grid-column: 1/4;
+                grid-row: 4/5;
+                background-color: #999;
+                align-content: center;
+
+                
+                align-items: center;
+                justify-items: center;   
+                
+            }
+            .grid-item:nth-child(6) .logo{
+                background: #f00;
+            }
+            .grid-item:nth-child(6) .copyright{
+                background: #0f0;
+            }
+            .grid-item:nth-child(6) .sns{
+                background: #00f;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="grid-container">
+            <div class="grid-item">
+                <div class="logo">
+                    <img src="../웹디자인 공개문제자료/01A-1/images/logo.jpg" alt="logo">
+                </div>
+
+                <div class="menu">
+                    <ul class="main">
+                        <li>
+                            <a href="#">탑</a>
+                            <ul class="sub left">
+                                <li><a href="#">블라우스</a></li>
+                                <li><a href="#">티</a></li>
+                                <li><a href="#">셔츠</a></li>
+                                <li><a href="#">니트</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">아우터</a>
+                            <ul class="sub">
+                                <li><a href="#">자켓</a></li>
+                                <li><a href="#">코트</a></li>
+                                <li><a href="#">가디건</a></li>
+                                <li><a href="#">머플러</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">팬츠</a>
+                            <ul class="sub">
+                                <li><a href="#">청바지</a></li>
+                                <li><a href="#">짧은바지</a></li>
+                                <li><a href="#">긴바지</a></li>
+                                <li><a href="#">레깅스</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">악세서리</a>
+                            <ul class="sub right">
+                                <li><a href="#">귀고리</a></li>
+                                <li><a href="#">목걸이</a></li>
+                                <li><a href="#">반지</a></li>
+                                <li><a href="#">팔찌</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-item">
+                <ul>
+                    <li><img src="../웹디자인 공개문제자료/01A-1/images/slide01.jpg" alt=""></li>
+                    <li><img src="../웹디자인 공개문제자료/01A-1/images/slide01.jpg" alt=""></li>
+                    <li><img src="../웹디자인 공개문제자료/01A-1/images/slide01.jpg" alt=""></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <input type="radio" name="btn" id="one" checked>
+                <input type="radio" name="btn" id="two">
+                <label for="one">공지사항</label>
+                <label for="two">갤러리</label>
+                <div class="con1">
+                    <ul>
+                        <li><a href="#">
+                            애스크로 서비스 변경 약관을 확인하세요
+                            <span>2019-10-10</span>
+                        </a></li>
+                        <li><a href="#">
+                            배송 택배사 변경 및 배송방식 변경에 따른 공지
+                            <span>2019-09-27</span>
+                        </a></li>
+                        <li><a href="#">
+                            여름 이월상품 정리 세일 안내
+                            <span>2019-09-07</span>
+                        </a></li>
+                        <li><a href="#">
+                            여름 바캉스 상품 정리 세일 안내
+                            <span>2019-08-24</span>
+                        </a></li>
+                        <li><a href="#">
+                            반품 및 교환 조건 변경 공지
+                            <span>2019-07-27</span>
+                        </a></li>
+                        <li><a href="#">
+                            상품별 사이즈표 보는 방법과 치수 공지
+                            <span>	2019-05-25</span>
+                        </a></li>
+                    </ul>
+                </div>
+
+                <div class="con2">
+                    <ul>
+                        <li><img src="../웹디자인 공개문제자료/01A-1/Contents/갤러리/gallery01.gif" alt=""></li>
+                        <li><img src="../웹디자인 공개문제자료/01A-1/Contents/갤러리/gallery02.gif" alt=""></li>
+                        <li><img src="../웹디자인 공개문제자료/01A-1/Contents/갤러리/gallery03.gif" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">
+                <div class="logo">
+                    로고
+                </div>
+
+                <div class="copyright">
+                    카피라이트
+                </div>
+
+                <div class="sns">
+                    에스엔에스
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            #popup{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                /*위 flex는 자식을 중심에 배치하기 위함*/
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                display: none;
+            }
+
+            .content{
+                width: 80%;
+                margin: 0 auto;
+                background-color: #ccc;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                            0 6px 20px 0 rgba(0, 0, 0, 0.1);
+            }
+
+            #popup:target{
+                display: flex;
+                /*none에서 화면에 배치할때 기존 popup을 flex로 설정했기 때문에 그에 맞는 디스플레이 설정 적용*/
+            }
+
+            header, footer{
+                background-color: #5cb85c;
+                color: #fff;
+                padding: 10px 0;
+                box-shadow: 0 1px 5px rgba(255, 255, 255, 0.5) inset;
+                /*드랍쉐도우를 이너쉐도우로 변경할때 inset을 적어주면 됨*/
+            }
+
+            h1, h3{
+                margin-left: 20px;
+            }
+
+            .close{
+                float: right;
+                color: #fff;
+                text-decoration: none;
+                font-size: 26px;
+                margin-right: 25px;
+            }
+
+            .close:hover{
+                color: black;
+            }
+
+            section{
+                margin: 0 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <a href="#popup">open Modal</a>
+
+        <div id="popup" class="modal">
+            <div class="content">
+                <header>
+                    <a href="#" class="close">x</a>
+                    <h1>Modal Header</h1>
+                </header>
+
+                <section>
+                    <p>Some text in the modal.</p>
+                    <p>Some text in the modal.</p>
+                </section>
+
+                <footer>
+                    <h3>Modal Footer</h3>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>

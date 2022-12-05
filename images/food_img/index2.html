@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Food style</title>
+
+        <style>
+            #wrap{
+                width: 800px;
+                font-size: 0;
+            }
+
+            ul{
+                list-style: none;
+            }
+
+            a{
+                text-decoration: none;
+                color: #000;
+            }
+
+            .directory{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .contents{
+                display: flex;
+            }
+
+            .navi{
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                width: 149px;
+            }
+
+            .number{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border-left: 1px solid #ccc;
+            }
+
+            .circle{
+                font-size: 60px;
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                background-color: #FDDEE1;
+                color: #E0A0A6;
+                text-align: center;
+                line-height: 120px;
+                align-self: center;
+            }
+
+            .rect{
+                font-size: 14px;
+                width: 130px;
+                height: 30px;
+                background-color: #FDDEE1;
+                color: #E0A0A6;
+                margin-top: 10px;
+                line-height: 30px;
+                padding-left: 10px;
+                align-self: center;
+            }
+
+            .nav-top{
+                font-size: 16px;
+                margin-bottom: 100px;
+
+            }
+
+            .nav-top ul{
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                width: 150px;
+            }
+
+            .nav-top ul li{
+                width: 125px;
+                height: 30px;
+                align-self: center;
+                border-bottom: 1px solid #ccc;
+                line-height: 30px;
+            }
+
+            .nav-bottom{
+                width: 150px;
+                font-size: 16px;
+            }
+
+            .nav-bottom ul{
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+            }
+
+            .nav-bottom ul li{
+                width: 140px;
+                height: 40px;
+                background-color: #ccc;
+                line-height: 40px;
+                text-align: center;
+                margin: 5px 0;
+                align-self: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <div class="top"><img src="top.gif" alt="top"></div>
+
+            <div class="directory">
+                <div class="food01"><img src="food_01.gif" alt="food01"></div>
+                <div class="menu"><img src="directory.gif" alt="directory"></div>
+                <div class="food02"><img src="food_02.gif" alt="food02"></div>
+            </div>
+
+            <div class="contents">
+                <div class="note"><img src="note.gif" alt="note"></div>
+                <div class="food"><img src="image.gif" alt="food"></div>
+
+
+
+                <div class="navi">
+                    <div class="number">
+                        <div class="circle"><a href="http://www.naver.com">08</a></div>
+                        <div class="rect">FOOD & DIET</div>
+                    </div>  
+                    <div class="nav">
+                        <div class="nav-top">
+                            <ul>
+                                <li><a href="#">01. contents</a></li>
+                                <li><a href="#">02. contents</a></li>
+                                <li><a href="#">03. contents</a></li>
+                                <li><a href="#">04. contents</a></li>
+                                <li><a href="#">05. contents</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="nav-bottom">
+                            <ul>
+                                <li><a href="#">01. contents</a></li>
+                                <li><a href="#">02. contents</a></li>
+                                <li><a href="#">03. contents</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="page"><img src="page.gif" alt="page"></div>
+            </div>
+
+            <div class="bottom"><img src="bottom.gif" alt="bottom"></div>
+        </div>
+    </body>
+</html>

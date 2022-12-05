@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            ul{
+                list-style: none;
+            }
+
+            a{
+                text-decoration: none;
+                color: #777;
+            }
+            
+            body{
+                font: 12px Arial, "맑은 고딕", sans-serif;
+                color: #333;
+            }
+
+            .tab{
+                width: 200px;
+                margin: 50px auto;
+                border: 1px solid #ccc;
+            }
+
+            input[type=radio]{
+                display: none;
+            }
+
+            .title{
+                display: flex; /*인라인-블록은 html에서 줄바꿈시 여백이 생김, 그래서 flex를 사용하기도 함*/
+            }
+
+            .title label{
+                display: inline-block;
+                width: 50%;
+                height: 30px;
+                line-height: 30px;
+                background-color: #eee;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            .tab_item ul li{
+                display: flex;
+                padding: 10px;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .tab_item ul li:last-child{
+                border-bottom: none;
+            }
+
+            .tab_item ul li a{
+                display: block;
+            }
+
+            .tab_item ul li p{
+                margin-left: 10px;
+            }
+
+            #html5:checked ~ .title label:first-child{
+                background-color: #fff;
+                border-right: 1px solid #ccc;
+            }
+
+            #html5:checked ~ .title label:last-child{
+                border-bottom: 1px solid #ccc;
+            }
+
+            #html5:checked ~ div:nth-of-type(3){
+                display: none;
+            }
+
+            #css3:checked ~ .title label:last-child{
+                background-color: #fff;
+                border-left: 1px solid #ccc;
+            }
+
+            #css3:checked ~ .title label:first-child{
+                border-bottom: 1px solid #ccc;
+            }
+
+            #css3:checked ~ div:nth-of-type(2){
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="tab">
+            <input type="radio" name="tab" id="html5" checked>
+            <input type="radio" name="tab" id="css3"> <!--인라인-블록은 html에서 줄바꿈을 하면 여백이 생겨 지금같은 경우에는 50%, 50%여도 줄바꿈이 일어남-->
+            <div class="title">
+                <label for="html5">HTML5</label>
+                <label for="css3">CSS3</label>
+            </div>
+
+            <div class="tab_item">
+                <ul>
+                    <li>
+                        <img src="https://via.placeholder.com/45" alt="45">
+                        <p>
+                            <a href="#">HTML5</a>
+                            <span>2022.11.03</span>
+                        </p>
+                    </li>
+
+                    <li>
+                        <img src="https://via.placeholder.com/45" alt="45">
+                        <p>
+                            <a href="#">HTML5</a>
+                            <span>2022.11.03</span>
+                        </p>
+                    </li>
+
+                    <li>
+                        <img src="https://via.placeholder.com/45" alt="45">
+                        <p>
+                            <a href="#">HTML5</a>
+                            <span>2022.11.03</span>
+                        </p>
+                    </li>
+
+                    <li>
+                        <img src="https://via.placeholder.com/45" alt="45">
+                        <p>
+                            <a href="#">HTML5</a>
+                            <span>2022.11.03</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab_item">
+                
+                <ul>
+                    <li>
+                        <img src="https://via.placeholder.com/45" alt="45">
+                        <p>
+                            <a href="#">CSS3</a>
+                            <span>2022.11.03</span>
+                        </p>
+                    </li>
+
+                    <li>
+                        <img src="https://via.placeholder.com/45" alt="45">
+                        <p>
+                            <a href="#">CSS3</a>
+                            <span>2022.11.03</span>
+                        </p>
+                    </li>
+
+                    <li>
+                        <img src="https://via.placeholder.com/45" alt="45">
+                        <p>
+                            <a href="#">CSS3</a>
+                            <span>2022.11.03</span>
+                        </p>
+                    </li>
+
+                    <li>
+                        <img src="https://via.placeholder.com/45" alt="45">
+                        <p>
+                            <a href="#">CSS3</a>
+                            <span>2022.11.03</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="div"></div>
+    <button onclick="btn()">버튼</button>
+
+    <script>
+      function showtime() {
+        let a = new Date(); //날짜메소드
+        let time = a.toLocaleTimeString();
+        document.getElementById("div").innerText = time;
+      }
+
+      let i = 0;
+      function btn() {
+        i += 1;
+        console.log(i % 2);
+        if (i % 2 == 0)
+          interval = setInterval(function () {
+            showtime();
+          }, 1000);
+        else if (i % 2 == 1) clearInterval(interval);
+      }
+
+      showtime();
+      let interval = setInterval(function () {
+        showtime();
+      }, 1000);
+    </script>
+  </body>
+</html>

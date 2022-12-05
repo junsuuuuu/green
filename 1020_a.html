@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+
+            body{
+                background-color: #ccc;
+            }
+
+            #wrap{
+                width: 80%;
+                margin: 50px;
+                background-color: #f4f4f4;
+            }
+
+            #wrap{
+                padding: 10px;
+            }
+
+            p{
+                margin: 10px 30px;
+            }
+
+            #new1, #new2, span{
+                display: none;
+            }
+
+            :target{ /*span은 직접 타겟된 것이 아니기 때문에 해당 속성은 적용되지 않음*/
+                border: 1px solid black;
+                background-color: #dadada;
+            }
+
+            #new1:target, #new2:target, #new1:target + span{ /*new1에 인접한 span에 적용*/
+                display: block;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <p><a href="#new1"jump to new content 1</a></p><!--href에는 #(id)만 적용이 가능-->
+            <p id="new1">new content 1</p><!--css에서 타겟이 되는 부분, 해당 파일, 장소로 이동-->
+            <span>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </span>
+            <p><a href="#new2">jump to new content 2</a></p>
+            <p id="new2">new content 2</p>
+        </div>
+    </body>
+</html>

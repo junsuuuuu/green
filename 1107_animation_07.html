@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            body{
+                background-color: black;
+            }
+
+            input[type=radio]{
+                display: none;
+            }
+
+            .play{
+                width: 500px;
+                height: 300px;
+                margin: 10px auto;
+                border: 1px solid white;
+            }
+
+            .btn{
+                width: 500px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .btn label{
+                width: 200px;
+                color: white;
+                border: 1px solid white;
+                text-align: center;
+                padding: 20px;
+                cursor: pointer;
+            }
+
+            .tri{
+                margin: 0 100px;
+                margin-top: 120px;
+                width: 0px;
+                height: 0px;
+                border-top: 30px solid transparent;
+                border-bottom: 30px solid transparent;
+                border-left: 30px solid white;
+                border-right: 30px solid transparent;
+                transform: translateX(130px);
+            }
+
+
+            #start:checked ~ .play .tri{
+                animation-name: move;
+                animation-duration: 0.5s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: linear;
+            }
+
+            @keyframes move{
+                0%{
+                    transform: translateX(0px);
+                }
+
+                100%{
+                    transform: translateX(250px);
+                }
+            }
+
+            .btn label:hover{
+                animation: color 1s infinite alternate;
+            }
+
+            @keyframes color{
+                0%{background-color: #8ac007;}
+                100%{background-color: #333;}
+            }
+        </style>
+    </head>
+
+    <body>
+        <input type="radio" name="click_btn" id="start">
+        <input type="radio" name="click_btn" id="stop" checked>
+
+        <div class="play">
+            <div class="tri"></div>
+        </div>
+
+        <div class="btn">
+            <label for="start">start</label>
+            <label for="stop">stop</label>
+        </div>
+    </body>
+</html>

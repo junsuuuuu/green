@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let a = 0;
+      let b = 0;
+      let c = 0;
+      let d = "";
+      let e = "";
+      let f = "";
+
+      for (let i = 0; i <= 100; i++) {
+        if (i % 2 == 0) {
+          a += i;
+          if (i < 100) {
+            d += i + "+";
+          } else if (i == 100) {
+            d += i;
+          }
+        } else {
+          b += i;
+          if (i < 100 - 1) {
+            e += i + "+";
+          } else if (i == 100 - 1) {
+            e += i;
+          }
+        }
+        c += i;
+        if (i < 100) {
+          f += i + "+";
+        } else if (i == 100) {
+          f += i;
+        }
+      }
+      document.write("짝수합 ", a, "<br>");
+      document.write(d, "<br>", "<br>");
+      document.write("홀수합 ", b, "<br>");
+      document.write(e, "<br>", "<br>");
+      document.write("그냥합 ", c, "<br>");
+      document.write(f, "<br>", "<br>");
+    </script>
+  </head>
+  <body></body>
+</html>

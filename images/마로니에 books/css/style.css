@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background: #e2c738;
+    color: #333;
+    font-family: Arial, "맑은 고딕" sans-serif;
+}
+
+.wrap{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+}
+
+.logo_text{
+    float: left;
+    width: 300px;
+    height: 220px;
+    text-align: center;
+    padding-top: 90px;
+    box-sizing: border-box;
+}
+
+.logo_text h1{
+    color: red;
+}
+
+.logo_text span{
+    color: #333;
+}
+
+.logo_img{
+    float: right;
+    width: 700px;
+    height: 220px;
+}
+
+.menu{
+    float: left;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: start;
+}
+
+.menu li{
+    width: 140px;
+    height: 100%;
+    line-height: 50px;
+}
+
+.menu li a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+}
+
+.bar{
+    float: left;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bar>ul{
+    height: 900px;
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bar>ul>li:nth-child(2){
+    margin-top: -30px;
+}
+
+.bar_ul_1{
+    float: right;
+    width: 270px;
+}
+
+.bar_ul_1 img{
+    margin-bottom: 4px;
+}
+
+.bar_ul_1 li:nth-child(2) a{
+    color: blue;
+    text-decoration: underline;
+}
+
+.bar_ul_2, .bar_ul_3{
+    float: right;
+    width: 270px;
+}
+
+.bar_ul_2 li, .bar_ul_3 li{
+    width: 100%;
+    border-bottom: 1px dotted #999;
+}
+
+.bar_ul_2 li a, .bar_ul_3 li a{
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+
+.contents{
+    float: right;
+    width: 700px;
+    height: 980px;
+    background: white;
+}
+
+.con_wrap{
+    float: left;
+    width: 100%;
+    height: 900px;
+}
+
+.con_wrap ul{
+    height: 100%;
+}
+
+.con_wrap ul li{
+    width: 100%;
+    height: 33.333%;
+    border-bottom: 1px dotted #999;
+}
+
+.con_wrap ul li:last-child{
+    border: none;
+}
+
+.con_wrap li{
+    text-align: center;
+}
+
+.con_wrap h2{
+    padding-top: 40px;
+    color: red;
+}
+
+.con_wrap h3{
+    padding-top: 10px;
+}
+
+.con_wrap h6{
+    padding-top: 5px;
+    color: red;
+}
+
+.con_wrap h6::before{
+    content: url(../image/red_sqaure.jpg) " ";
+}
+
+.con_wrap p{
+    text-align: left;
+    font-size: 12px;
+    padding: 20px 22px;
+}
+
+.btn{
+    float: right;
+    width: 100px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 10px;
+    margin-right: 70px;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}

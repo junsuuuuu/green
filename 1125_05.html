@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            let x = new Date();
+            document.write(x, "<br>");
+            document.write("년도 : ", x.getFullYear() ,"<br>");
+            document.write("월 : ", x.getMonth() ,"<br>"); //(0-11)0부터 가져옴 출력땐 1더함
+            document.write("일 : ", x.getDate() ,"<br>");
+            document.write("요일 : ", x.getDay(), "<br>"); //(0-6) 일요일부터 0~6 토요일
+            document.write("오늘날짜 : ", x.getFullYear(), "년 ", x.getMonth()+1, "월 ", x.getDate(), "일 " ,"<br>");
+            document.write("시 : ", x.getHours(), "<br>");
+            document.write("분 : ", x.getMinutes(), "<br>");
+            document.write("초 : ", x.getSeconds(), "<br>");
+            document.write("시간 : ", x.getTime(), "<br>");
+            document.write("시간 : ", x.getHours(), ":", 
+            10 > x.getMinutes()?"0"+x.getMinutes():x.getMinutes(), ":", 
+            10 > x.getSeconds()?"0"+x.getSeconds():x.getSeconds(), "<br>");
+            //분, 초 단위의 0~9초를 00~09 형식으로 만들고자 위 처럼 적용
+            location.reload();
+        </script>
+    </head>
+
+
+    </body>
+</html>

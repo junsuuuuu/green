@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .banner{
+                width: 1440px;
+                overflow: hidden;
+                margin: 0 auto;
+                padding: 50px;
+            }
+
+            .box_wrap{
+                float: left;
+                width: 33.333%;
+                height: 400px;
+            }
+
+            .box{
+                width: 400px;
+                height: 400px;
+            }
+
+            .box_wrap:nth-child(1) .box{
+                float: left;
+                background-color: aqua;
+            }
+
+            .box_wrap:nth-child(2) .box{
+                background-color: blue;
+                margin: 0 auto;
+            }
+
+            .box_wrap:nth-child(3) .box{
+                float: right;
+                background-color: blueviolet;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="banner">
+            <div class="box_wrap"><div class="box"></div></div>
+            <div class="box_wrap"><div class="box"></div></div>
+            <div class="box_wrap"><div class="box"></div></div>
+        </div>
+    </body>
+</html>

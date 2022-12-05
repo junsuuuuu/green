@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <style>
+            body{
+                background-color: black;
+                color: #504326;
+            }
+
+            ul{
+                list-style: none;
+            }
+
+            .wrap1, .wrap2{
+                width: 300px;
+                height: 200px;
+                padding: 10px;
+            }
+
+            .drop{
+                width: 300px;
+                background-color: white;
+            }
+            
+            .tr{
+                display: inline-block;
+            }
+
+            .wrap1:target .tr, .wrap2:target .tr{
+                animation: tr 1s forwards;
+            }
+
+            .wrap1:target ul, .wrap2:target ul{
+                transform-origin: top;
+                animation: drop 0.5s forwards;
+            }
+
+            @keyframes tr{
+                0%{transform: rotate(0deg);}
+                100%{transform: rotate(45deg);}
+            }
+
+            @keyframes drop{
+                0%{transform: scaleY(0);}
+                100%{transform: scaleY(100%);}
+            } 
+
+            .wrap1 ul, .wrap2 ul{
+                display: block;
+                padding: 0;
+                transform: scaleY(0);
+            }
+
+            .wrap1 ul li, .wrap2 ul li{
+                width: 100%;
+                height: 50px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap1" id="tg1">
+            <div class="drop">
+                <span class="tr">+</span>
+                <a href="#tg1">DropDown Menu</a>
+
+                <ul>
+                    <li>menu01</li>
+                    <li>menu02</li>
+                    <li>menu03</li>
+                </ul>
+            </div>
+        </div>
+
+    
+        <div class="wrap2" id="tg2">
+            <div class="drop">
+                <span class="tr">+</span>
+                <a href="#tg2">DropDown Menu</a>
+    
+                <ul>
+                    <li>menu01</li>
+                    <li>menu02</li>
+                    <li>menu03</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

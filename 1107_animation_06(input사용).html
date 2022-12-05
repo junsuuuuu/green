@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            ul{
+                list-style: none;
+            }
+
+            input[type=radio]{
+                display: none;
+            }
+
+            .box{
+                position: relative;
+                width: 500px;
+                height: 600px;
+                margin: 0 auto;
+            }
+
+            .box li{ /*이미지 위치를 조절하기 위함*/
+                position: absolute;
+                width: 500px;
+                height: 500px;
+            }
+
+            .pipe{
+                background: url(images/pipe.png);
+            }
+
+            .pro{
+                background: url(images/propeller.png);
+            }
+
+            .btnbox{ 
+                width: 500px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+            }
+
+            .btnbox li{
+                width: 100px;
+            }
+
+            .btnbox li label{ 
+                display: block;
+                cursor: pointer;
+                border: 1px solid black;
+                border-radius: 50px;
+                padding: 10px;
+            }
+
+            #left:checked ~ .btnbox li:first-child label, 
+            #right:checked ~ .btnbox li:nth-child(2) label,
+            #off:checked ~ .btnbox li:last-child label
+            /*해당 id가 체크가 되면 형제인 btnbox에 해당 순서에 label에 색상을 변경*/
+            {
+                background-color: black;
+                color: white;
+            }
+
+            @keyframes left{ /*회전을 위한*/
+                0%{
+                    transform: rotate(0deg);
+                }
+
+                100%{
+                    transform: rotate(-1080deg);
+                }
+            }
+            #left:checked ~ .box .pro{ 
+            /*left가 체크되면 형제인 box의 자식인 pro에 아래의 속성을 적용(회전하는 건 결국 프로펠러니까)*/
+
+                /*
+                animation-name: left;
+                animation-duration: 2s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                */
+
+                animation: left 2s linear infinite;
+            }
+
+            @keyframes right{
+                0%{
+                    transform: rotate(0deg);
+                }
+
+                100%{
+                    transform: rotate(1080deg);
+                }
+            }
+            #right:checked ~ .box .pro{
+                animation-name: right;
+                animation-duration: 2s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+        </style>
+    </head>
+
+    <body>  
+        <input type="radio" name="btn" id="left" checked>
+        <input type="radio" name="btn" id="right">
+        <input type="radio" name="btn" id="off">
+
+        <ul class="box">
+            <li class="pipe"></li>
+            <li class="pro"></li>
+        </ul>
+
+        <ul class="btnbox">
+            <li><label for="left">turn left</label></li>
+            <li><label for="right">turn right</label></li>
+            <li><label for="off">off</label></li>
+        </ul>
+    </body>
+</html>

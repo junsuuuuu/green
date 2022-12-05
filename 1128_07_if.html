@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            let num = prompt("점수입력");
+            let msg = confirm("당신이 입력한 점수는 " + num + "점이 맞습니까?");
+            if(msg){
+                if(num >= 90){
+                    document.write("당신의 학점은 A학점입니다.");
+                }
+                else if(num >= 80){
+                    document.write("당신의 학점은 B학점입니다.");
+                }
+                else if(num >= 70){
+                    document.write("당신의 학점은 C학점입니다.");
+                }
+                else if(num >= 60){
+                    document.write("당신의 학점은 D학점입니다.");
+                }
+                else{
+                    document.write("당신의 학점은 F학점입니다.");
+                }
+            }
+            else{
+                document.write("점수를 잘못 입력함");
+            }
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+</html>

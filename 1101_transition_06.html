@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            ul{
+                list-style: none;
+            }
+
+            a{
+                text-decoration: none;
+                color: #fff;
+            }
+
+            body{
+                background-color: blueviolet;
+            }
+
+            .wrap{
+                width: 100%;
+                height: 100px;
+            }
+
+            .wrap>ul>li{
+                float: left;
+                width: 20%;
+                text-align: center;
+                line-height: 100px;
+                position: relative;
+            }
+
+            .wrap>ul>li>a{
+                position: relative; /*우리는 글씨 크기만큼만 hover시 줄을 그으려고 하는데 여기서 a가 블록이면 크기를 조절하기 힘들기 때문에 인라인을 유지해야만 a크기만큼 줄을 그을 수 있음*/
+            }
+
+            .wrap>ul>li>a:hover{
+                color: bisque;
+            }
+
+            .wrap>ul>li>a:after{
+                content: "";
+                transform: scale(0); /*아래에 스케일을 키울때(트렌지션을 사용할때) 기준이 되어야하기 때문에 만듬*/
+                transition: all 1s;
+            }
+
+            .wrap>ul>li>a:hover::after{
+                position: absolute;
+                bottom: -10px;
+                left: 0px;
+                display: block;
+                content: "";
+                width: 100%;
+                height: 5px;
+                background-color: bisque;
+                transform: scale(1);
+
+            }
+
+            .subs{
+                width: 100%;
+                background-color: #fff;
+                position: absolute;
+                top: 100px;
+                height: 0;
+                overflow: hidden;
+                transition: all 1s;
+            }
+
+            .wrap>ul>li:hover .subs{
+                height: 400px;
+            }
+
+            .subs a{
+                color: black;
+                line-height: 100px;
+            }
+
+            .bg{
+                position: absolute;
+                width: 100%;
+                height: 0px;
+                background-color: #fff;
+                top: 100px;
+                z-index: -1;
+                transition: all 1s;
+            }
+
+            .wrap:hover ~ .bg{
+                height: 400px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <ul>
+                <li>
+                    <a href="#">Happy Bath이야기기기기기기</a>
+                    <ul class="subs">
+                        <li><a href="#">해피바스이야기</a></li>
+                        <li><a href="#">해피바스이야기</a></li>
+                        <li><a href="#">해피바스이야기</a></li>
+                        <li><a href="#">해피바스이야기</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">해피바스선물</a>
+                    <ul class="subs">
+                        <li><a href="#">해피바스이야기</a></li>
+                        <li><a href="#">해피바스이야기</a></li>
+                        <li><a href="#">해피바스이야기</a></li>
+                        <li><a href="#">해피바스이야기</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">해피바스뷰티톡</a>
+                    <ul class="subs">
+                        <li><a href="#">해피바스이야기</a></li>
+                        <li><a href="#">해피바스이야기</a></li>
+                        <li><a href="#">해피바스이야기</a></li>
+                        <li><a href="#">해피바스이야기</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">해피바스제품</a>
+                    <ul class="subs">
+                        <li><a href="#">해피바스이야기</a></li>
+                        <li><a href="#">해피바스이야기</a></li>
+                        <li><a href="#">해피바스이야기</a></li>
+                        <li><a href="#">해피바스이야기</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">해피바스함께하기</a>
+                    <ul class="subs">
+                        <li><a href="#">해피바스이야기</a></li>
+                        <li><a href="#">해피바스이야기</a></li>
+                        <li><a href="#">해피바스이야기</a></li>
+                        <li><a href="#">해피바스이야기</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="bg"></div>
+
+    </body>
+</html>

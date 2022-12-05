@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+
+        </style>
+
+        <script>
+            let a = prompt("국어점수는?");
+            let b = prompt("영어점수는?");
+            let c = prompt("수학점수는?");
+            let d = (Number(a)+Number(b)+Number(c)) / 3;
+            document.write(typeof a, typeof b, typeof c);
+
+            document.write("당신이 입력한 국어점수는 ", a, "점이고, 영어점수는 ", b, "점이고, 수학점수는 ", c, "점입니다.", "<br>");
+
+            document.write("총 합은 ", Number(a)+Number(b)+Number(c), "점입니다. ");
+            document.write("평균은 ", d.toFixed(2), "점입니다. ");
+
+            if(a>=40 && b>=40 && c>=40 && d>=60){
+                document.write("합격입니다! ");
+            }
+            else{
+                document.write("불합격입니다! ");
+            }
+
+            let ee = a>=40 && b>=40 && c>=40 && d>=60 ? "합격입니다!! " : "불합격입니다!! ";
+            document.write(ee);
+        </script>
+    </head>
+
+    <body>
+        
+    </body>
+</html>
